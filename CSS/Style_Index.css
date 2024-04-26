@@ -14,6 +14,7 @@
 }    
 
 #h2Descripcion{
+    /*Estilo del texto descriptivo*/
     text-align: left;                       /*Alineación a Izquierda*/
     font-family: 'Tangerine', serif;        /*Eleccion del Font*/
     font-family: 'Lobster', serif;          /*Eleccion del Font*/
@@ -25,6 +26,7 @@
 }
 
 .clsOpcionPedido{
+    /*Estilo de las opciones de retiro*/
     text-align: left;                       /*Alineación a Izquierda*/
     font-family: 'Amaranth', serif;         /*Eleccion del Font*/
     color: rgb(180, 91, 58);              /*Color del Titulo*/
