@@ -61,11 +61,19 @@
 /* Estilos Responsivos*/
 @media only screen and (max-width: 800px) {
     /*Estilo para celular*/
+    #h1Empresa{
+        /*Estilo del Nombre de la empresa*/ 
+        font-size: 50px;                        /*Tamaño de la letra*/
+    }
+    #h4Descripcion{
+        font-size: 20px;                        /*Tamaño de la letra*/
+    }
+    }
     .clsDiv {
         width: 96%;                       /*Ancho de los contenedores*/
     }
     #h2Descripcion{
-        font-size: 20px;                        /*Tamaño de la letra*/
+        font-size: 18px;                        /*Tamaño de la letra*/
     }
     .clsOpcionPedido{
         font-size: 16px;                        /*Tamaño de la letra*/
