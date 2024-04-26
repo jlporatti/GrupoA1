@@ -209,19 +209,34 @@
 /* Estilos Responsivos*/
 @media only screen and (max-width: 650px) {
     /*Estilo para celular*/
+    #h1Empresa{
+    /*Estilo del Nombre de la empresa*/ 
+    font-size: 50px;                        /*Tamaño de la letra*/
+    }
+
+    #h4Descripcion{
+        font-size: 18px;                        /*Tamaño de la letra*/
+    }
+
     .clsDivTotal{
         width: 280px;                /*Ancho del Contenedor*/
     }
+
     #h2Titulo{
-        font-size: 18px;;            /*Tamaño Letra*/
-    }
-    #pMonto{
-        margin-top: 3px;             /*Margen superior*/
-        font-size: 18px;             /*Tamaño Letra*/
+        font-size: 12px;;            /*Tamaño Letra*/
     }
 
+    #pMonto{
+        margin-top: 3px;             /*Margen superior*/
+        font-size: 10px;             /*Tamaño Letra*/
+    }
+    
     .clsAside {
         justify-content: space-evenly;         /*Reparte el Espacio entre objetos y sus extremos*/
     }
 
+    #ftrPagina{
+        display: flex;
+        flex-direction: column-reverse;     /*Cambia a Columna de abajo hacia arriba.*/
+    }
 }
