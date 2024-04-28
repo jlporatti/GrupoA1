@@ -2,7 +2,7 @@
     /*Estilo de la barra de titulo*/
     font-size: 17px;                        /*Tamaño Letra*/
     display: inline-flex;                   /*Define el modo de visualisación en Flex*/
-    justify-content: space-between;          /*Reparte el Espacio entre objetos y sus extremos*/
+    justify-content: space-between;         /*Reparte el Espacio entre objetos y sus extremos*/
     background-color: rgb(95, 96, 96);    /*Color del Fondo*/
     padding: 5px;                           /*Espaciado interno*/
     width: 100%;                            /*Ancho del Contenedor*/
@@ -25,10 +25,10 @@
 
 #pMonto{
     /*Estilo del Titulo*/
-    font-size: 20px;                          /*Tamaño Letra*/
+    font-size: 20px;                                    /*Tamaño Letra*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;   /*Estilo de Letra de Google*/
-    color: rgb(138, 227, 138);              /*Color Letras*/
-    margin: 0px 10px 0px 0px;                 /*Margenes*/
+    color: rgb(138, 227, 138);                        /*Color Letras*/
+    margin: 0px 10px 0px 0px;                           /*Margenes*/
 }
 
 #btnFinalizar{
@@ -91,21 +91,22 @@
     /*Estilo de los Presios*/
     font-size: 20px;                        /*Tamaño de letra*/
     font-weight: 600;                       /*Espedor de la letra*/
-    color: darkgreen;                     /*Color del Descripción*/
+    color: darkgreen;                     /*Color de la Letra*/
 }
 
 .clsSpnCantidad{
-    font-size: 20px;
-    font-weight: 900;
-    padding: 10px;
-    color: navy;
+    /*Cantidad de menu contratados*/
+    font-size: 20px;                        /*Tamaño de letra*/
+    font-weight: 900;                       /*Espedor de la letra*/
+    padding: 10px;                          /*Espaciado interno*/
+    color: navy;                          /*Color de la Letra*/
 }
 
 .clsDivBotonMenu {
     /* Estilo de la celdas de la tabla correspondiente a la BOTON del menú*/
     align-content: center;                  /*Alineación del contenido*/
     display: flex;                          /*Define el modo de visualisación en Flex*/
-    justify-content: center;          /*Reparte el Espacio entre objetos y sus extremos*/
+    justify-content: center;                /*Reparte el Espacio entre objetos y sus extremos*/
     text-align: center;                     /*Alineación horizontal*/
     vertical-align: middle;                 /*Alineación vertical*/
     width: 100%;                            /*Ancho de la Celda*/
@@ -193,50 +194,76 @@
 
 #divResPedido{
     /* Estilo del del Resumen del Pedido*/
-    width: 100%;                                            /*Ancho del Contenedor*/
-    height: 20%;                                            /*Alto del Contenedor*/
-    overflow: auto;                                         /*Activo escroll*/
+    width: 100%;                                 /*Ancho del Contenedor*/
+    height: 20%;                                 /*Alto del Contenedor*/
+    overflow: auto;                              /*Activo escroll*/
 }
 
 
 #divResBotones{
     /* Estilo del contenedor de botones del Resumen*/
-    display: flex;                   /*Define el modo de visualisación en Flex*/
-    justify-content: space-between;          /*Reparte el Espacio entre objetos y sus extremos*/
+    display: flex;                              /*Define el modo de visualisación en Flex*/
+    justify-content: space-between;             /*Reparte el Espacio entre objetos y sus extremos*/
 }
 
+#divFntMensaje{
+        /* Estilo del Contenedor del Resumen*/    
+        /*display: none;                        /*Oculta el contenedor*/
+        position: fixed;                        /*Posicionamiento Fijo*/
+        z-index: 9999;                          /*Lo traigo al Frente de todo*/
+        top: 50%;                               /*Alineado al centro verticalmente */
+        left: 50%;                              /*Alineado al centro horizontalmente */
+        transform: translate(-50%, -50%);       /*Centro la ventana*/
+        width:400px;                            /*Ancho del contenedor*/
+        height: 150px;                          /*Alto del Boton*/
+        background-color:  #2c2c83;           /*Color del Fondo*/
+        border-radius: 10px;                    /*Redondez de la Esquinas*/
+        padding: 2px 10px;                      /*Espacio interior */
+        border: groove;                         /*Elimina el borde predeterminado*/
+        font-weight: 500;                       /*Espesor de la Letra*/
+        text-align: center;
+}
+
+#pFntMensajeTitulo{
+    font-size: 14px;                                        /*Tamaño Letra*/
+    font-weight: 900;                                       /*Grosor Letrs*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;       /*Tipo Letra*/
+    color: white;                                         /*Color de la Letra*/
+
+}
+#pFntMensaje{
+    font-size: 12px;                                        /*Tamaño Letra*/
+    font-weight: 500;                                       /*Grosor Letrs*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;       /*Tipo Letra*/
+    color: white;                                         /*Color de la Letra*/
+}
+
+#btnFntMensaje{
+    /* Estilo de los BOTON del menú*/
+    width: 90px;                                /*Ancho del Boton*/
+    height: 30px;                               /*Alto del Boton*/
+    border-radius: 10px;                        /*Redondez de la Esquinas*/
+    border: groove;                             /*Elimina el borde predeterminado*/
+    cursor: pointer;                            /*Cambia el cursor al pasar por arriba*/
+    font-weight: 500;                           /*Espesor de la Letra*/
+    background-color: #c7c8d4;                /*Color del Fondo*/
+    text-align: center;
+}
 
 /* Estilos Responsivos*/
 @media only screen and (max-width: 650px) {
     /*Estilo para celular*/
-    #h1Empresa{
-    /*Estilo del Nombre de la empresa*/ 
-    font-size: 50px;                        /*Tamaño de la letra*/
-    }
-
-    #h4Descripcion{
-        font-size: 18px;                        /*Tamaño de la letra*/
-    }
 
     .clsDivTotal{
-        width: 280px;                /*Ancho del Contenedor*/
+        width: 280px;                           /*Ancho del Contenedor*/
     }
 
     #h2Titulo{
-        font-size: 12px;;            /*Tamaño Letra*/
+        font-size: 12px;;                       /*Tamaño Letra*/
     }
 
     #pMonto{
-        margin-top: 3px;             /*Margen superior*/
-        font-size: 10px;             /*Tamaño Letra*/
-    }
-    
-    .clsAside {
-        justify-content: space-evenly;         /*Reparte el Espacio entre objetos y sus extremos*/
-    }
-
-    #ftrPagina{
-        display: flex;
-        flex-direction: column-reverse;     /*Cambia a Columna de abajo hacia arriba.*/
+        margin-top: 3px;                        /*Margen superior*/
+        font-size: 10px;                        /*Tamaño Letra*/
     }
 }

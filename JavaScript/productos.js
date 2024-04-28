@@ -79,7 +79,7 @@ let iniciaResumen = () => {
     document.getElementById("txtAreaAclaraciones").value = "";
 }
 //-------------------------------------- Hoja Productos - Botón Finalizar -----------------------------------------------
-// Evento On Click 
+// Evento On Click Boton Finalizar
 let btnOnClickFinalizar=() => {
     let pedido = "";
     let total = 0;
@@ -102,7 +102,7 @@ let btnOnClickFinalizar=() => {
 
 
 //----------------------------------------- Hoja Productos - Botón Cancelar -------------------------------------------------
-// Evento On Click del Botón Finalizar
+// Evento On Click del Botón Cancelar
 let btnOnClickCancelar=() => {
     // Inicializa Resumen y sale
     iniciaResumen();
@@ -116,13 +116,15 @@ let btnOnClickCancelar=() => {
 // Evento On Click del Botón Enviar
 let btnOnClickEnviar=() => {
 
-    let mensaje = "Debe Ingresar ";
+    let mensaje = "";
+    let erreMail = valEMail(document.getElementById("iptEmail").value, false);
+
 
    if (document.getElementById("iptNombre").value == "")
     {
         mensaje += "Nombre, ";
     }
-    if (document.getElementById("iptEmail").value == "")
+    if (erreMail != "")
     {
         mensaje += "eMail, ";
     }
@@ -134,16 +136,16 @@ let btnOnClickEnviar=() => {
     {
         mensaje += "Dirección, ";
     }
-   if (document.getElementById("sltBarrio" ).value == "")
+    if (document.getElementById("sltBarrio" ).value == "")
     {
         mensaje += "Barrio, ";
     }
 
     // Muestra el mensaje de error
     mensaje = mensaje.substring(0,mensaje.length-2);
-    if (mensaje.length > 15 )
+    if (mensaje.length != "" )
     {
-        //alert(mensaje);
+        fctMensaje( "Falta Ingresar: ", mensaje + ". " + erreMail);
         document.getElementById("pAviso" ).innerHTML = "=>";
         document.getElementById("pAviso" ).style.color = "yelow";
         document.getElementById("pMensaje" ).innerHTML = mensaje;

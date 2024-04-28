@@ -25,7 +25,7 @@
 
 #h4Descripcion{
     /*Estilo de la Descripción de la empresa*/ 
-    color: rgb(54, 54, 204);              /*Color del Titulo*/
+    color: rgb(161, 210, 237);              /*Color del Titulo*/
     font-family: 'Tangerine', serif;        /*Eleccion del Font*/
     font-size: 25px;                        /*Tamaño de la letra*/
     line-height: .7;                        /*Interlineado entre textos*/
@@ -33,15 +33,15 @@
 }
 
 #navMenu {
-        /*Estilo de la barra de menú*/    
-        padding: 5px;                          /*Espaciado interno*/
-        background-color: #444;              /*Color del fondo*/
-        overflow: hidden;                      /*Si el contenido sobrepasa el ancho lo Oculta */
-        width: 100%;                           /* Ajustar el ancho al 100% */
-        margin-top: 1px;                       /*Margen superior*/
-        margin-bottom: 1px;                    /*Margen inferior*/
-        height: 30px;                          /*Altura del Cotenedor*/
-        font-family: Verdana, Geneva, Tahoma, sans-serif;   /*Tipo Letra*/
+    /*Estilo de la barra de menú*/    
+    padding: 5px;                          /*Espaciado interno*/
+    background-color: #444;              /*Color del fondo*/
+    overflow: hidden;                      /*Si el contenido sobrepasa el ancho lo Oculta */
+    width: 100%;                           /* Ajustar el ancho al 100% */
+    margin-top: 1px;                       /*Margen superior*/
+    margin-bottom: 1px;                    /*Margen inferior*/
+    height: 30px;                          /*Altura del Cotenedor*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   /*Tipo Letra*/
 }    
 
 .clsAMenuPrincipal {
@@ -127,4 +127,36 @@
     0% { opacity: 1; }
     50% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+
+
+/* Estilos Responsivos*/
+@media only screen and (max-width: 650px) {
+    /*Estilo para celular*/
+    #h1Empresa{
+        /*Estilo del Nombre de la empresa*/ 
+        font-size: 50px;                        /*Tamaño de la letra*/
+    }
+
+    #h4Descripcion{
+            /*Estilo de la Descripción de la empresa*/ 
+        font-size: 18px;                        /*Tamaño de la letra*/
+    }
+
+    #navMenu{
+        /*Estilo de la barra de menú*/    
+        font-size: 10px;
+    }
+    
+    #asdPrincipal{
+        /* Estilo de los sub contenedores de la Pantalla*/
+        justify-content: space-evenly;          /*Reparte el Espacio entre objetos y sus extremos*/
+    }
+
+    #ftrPagina{
+        /*Estilo del FOOTER de Pagina*/
+        display: flex;                          /*Contenedor Flexible al contenido*/
+        flex-direction: column-reverse;         /*Cambia a Columna de abajo hacia arriba.*/
+    }
 }
