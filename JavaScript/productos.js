@@ -198,8 +198,13 @@ function btnOnClickEnviar()
         
         // Oculta la Pantalla de Resumen
         document.getElementById("divResumen").style.display = "none"; 
-        document.getElementById("pAviso" ).innerHTML = "";
-        document.getElementById("pMensaje" ).innerHTML ="";
+        // document.getElementById("pAviso" ).innerHTML = "";
+        // document.getElementById("pMensaje" ).innerHTML ="";
+        fctMensaje( "", "Pedido Solicitado Correctamente!!!!");
+        document.getElementById("pAviso" ).innerHTML = "=>";
+        document.getElementById("pAviso" ).style.color = "green";
+        document.getElementById("pMensaje" ).innerHTML = "Pedido Solicitado Correctamente!!!!";
+        document.getElementById("pMensaje" ).style.color = "rgb(237, 55, 55)";   
 
     }
 }
