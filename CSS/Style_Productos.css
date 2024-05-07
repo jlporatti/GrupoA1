@@ -1,45 +1,46 @@
 #divTitulo {
     /*Estilo de la barra de titulo*/
-    font-size: 17px;                        /*Tamaño Letra*/
     display: inline-flex;                   /*Define el modo de visualisación en Flex*/
     justify-content: space-between;         /*Reparte el Espacio entre objetos y sus extremos*/
-    background-color: rgb(95, 96, 96);    /*Color del Fondo*/
-    padding: 5px;                           /*Espaciado interno*/
     width: 100%;                            /*Ancho del Contenedor*/
     height: 30px;                           /*Altura del Cotenedor*/
+    padding: 5px;                           /*Espaciado interno*/
+    background-color: rgb(95, 96, 96);    /*Color del Fondo*/
+    font-size: 17px;                        /*Tamaño Letra*/
 }
 
 #h2Titulo{
     /*Estilo del Titulo*/
-    color: rgb(234, 68, 71);              /*Color del Titulo*/
-    font-family: 'Merienda';                /*Eleccion del Font*/
     margin: 0px 0px 0px 10px;               /*Margenes*/
+    font-family: 'Merienda';                /*Eleccion del Font*/    
+    color: rgb(234, 68, 71);              /*Color del Titulo*/
+
 }
 
 #divTotal{        
     /*Estilo del Importe Total*/                   
-    width: 350px;                           /*Ancho del Contenedor*/
     display: inline-flex;                   /*Modo flexible de acomodamiento del contenido*/
     justify-content: space-between;         /*Modo del Espaciado del Contenido*/
+    width: 350px;                           /*Ancho del Contenedor*/
 }
 
 #pMonto{
     /*Estilo del Titulo*/
-    font-size: 20px;                                    /*Tamaño Letra*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;   /*Estilo de Letra de Google*/
-    color: rgb(138, 227, 138);                        /*Color Letras*/
+    font-size: 20px;                                    /*Tamaño Letra*/
     margin: 0px 10px 0px 0px;                           /*Margenes*/
+    color: rgb(138, 227, 138);                        /*Color Letras*/
 }
 
 #btnFinalizar{
     height: 30px;                           /*Altura Contenedor*/
     width: 80px;                            /*Ancho del Boton*/
     background-color: #c7c8d4;            /*Color del Fondo*/
-    color: black;                         /*Color Letras*/
     border-radius: 10px;                    /*Redondez de la Esquinas*/
     border: groove;                         /*Elimina el borde predeterminado*/
     cursor: pointer;                        /*Cambia el cursor al pasar por arriba*/
     font-weight: 700;                       /*Espesor de la Letra*/
+    color: black;                         /*Color Letras*/
 
 }
 
@@ -51,10 +52,10 @@
     height: 400px;                            /*Altura del Cotenedor*/
     margin-bottom: 1%;                        /*Margen Inferior*/
     text-align: center;                       /*Alineación del texcto*/
-    /*border-style: solid;                    /*Borde del Recuadro*/
-    /*background-color: rgb(152, 171, 192);   /*Color del Fondo*/
     border-radius: 20px;
     background: rgb(213, 212, 212);         /*Color del Fondo*/ 
+    /*border-style: solid;                    /*Borde del Recuadro*/
+    /*background-color: rgb(152, 171, 192);   /*Color del Fondo*/
 }    
 
 .clsDivFotoMenu {
@@ -65,17 +66,17 @@
 
 .clsImgFotoMenu{
     /*Estilo de las Fotos de los Platos*/
-    border-radius: 50%;                     /*Redondeo de esquinas*/
     width: 70%;                             /*Ancho del Contenedor*/
     height: 70%;                            /*Altura del Cotenedor*/
+    border-radius: 50%;                     /*Redondeo de esquinas*/
 }
 
 .clsDivDescMenu {
     /* Estilo de la celdas de la tabla correspondiente a la DESCRIPCION del menú*/
+    width: 100%;                                        /*Ancho del Contenedor*/
+    align-content: center;                              /*Alineación del Contenido*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;   /*Estilo de Letra de Google*/
     color: black;                                     /*Color de la Letra*/
-    align-content: center;                              /*Alineación del Contenido*/
-    width: 100%;                                        /*Ancho del Contenedor*/
 }
 
 .clsH3TitMenu{
@@ -96,20 +97,20 @@
 
 .clsSpnCantidad{
     /*Cantidad de menu contratados*/
+    padding: 10px;                          /*Espaciado interno*/
     font-size: 20px;                        /*Tamaño de letra*/
     font-weight: 900;                       /*Espedor de la letra*/
-    padding: 10px;                          /*Espaciado interno*/
     color: navy;                          /*Color de la Letra*/
 }
 
 .clsDivBotonMenu {
     /* Estilo de la celdas de la tabla correspondiente a la BOTON del menú*/
-    align-content: center;                  /*Alineación del contenido*/
     display: flex;                          /*Define el modo de visualisación en Flex*/
+    width: 100%;                            /*Ancho de la Celda*/
+    align-content: center;                  /*Alineación del contenido*/
     justify-content: center;                /*Reparte el Espacio entre objetos y sus extremos*/
     text-align: center;                     /*Alineación horizontal*/
     vertical-align: middle;                 /*Alineación vertical*/
-    width: 100%;                            /*Ancho de la Celda*/
 }
 
 .clsBtnSeleccion{
@@ -139,16 +140,16 @@
 #divResumen{
     /* Estilo del Contenedor del Resumen*/    
     display: none;                          /*Oculta el contenedor*/
-    position: fixed;                        /*Posicionamiento Fijo*/
-    z-index: 9999;                          /*Lo traigo al Frente de todo*/
-    top: 50%;                               /*Alineado al centro verticalmente */
-    left: 50%;                              /*Alineado al centro horizontalmente */
-    transform: translate(-50%, -50%);       /*Centro la ventana*/
     width: 280px;                           /*Ancho del contenedor*/
     height: 520px;                          /*Alto del Boton*/
+    padding: 10px 10px;                     /*Espacio interior */
+    position: fixed;                        /*Posicionamiento Fijo*/
+    top: 50%;                               /*Alineado al centro verticalmente */
+    left: 50%;                              /*Alineado al centro horizontalmente */
+    z-index: 9999;                          /*Lo traigo al Frente de todo*/
+    transform: translate(-50%, -50%);       /*Centro la ventana*/
     background-color:  #aaaaac;           /*Color del Fondo*/
     border-radius: 10px;                    /*Redondez de la Esquinas*/
-    padding: 10px 10px;                     /*Espacio interior */
     border: groove;                         /*Elimina el borde predeterminado*/
     font-weight: 500;                       /*Espesor de la Letra*/
 }
@@ -206,22 +207,25 @@
     justify-content: space-between;             /*Reparte el Espacio entre objetos y sus extremos*/
 }
 
+
+/* Inicio Especifico Funcion de Mensaje ------------->*/
 #divFntMensaje{
         /* Estilo del Contenedor del Resumen*/    
         /*display: none;                        /*Oculta el contenedor*/
-        position: fixed;                        /*Posicionamiento Fijo*/
-        z-index: 9999;                          /*Lo traigo al Frente de todo*/
+        width:340px;                            /*Ancho del contenedor*/
+        height: 150px;                          /*Alto del Boton*/
         top: 50%;                               /*Alineado al centro verticalmente */
         left: 50%;                              /*Alineado al centro horizontalmente */
+        padding: 2px 10px;                      /*Espacio interior */
+        text-align: center;                     /*Texto Centrado en el contenedor*/
+        position: fixed;                        /*Posicionamiento Fijo*/
+        z-index: 9999;                          /*Lo traigo al Frente de todo*/
         transform: translate(-50%, -50%);       /*Centro la ventana*/
-        width:400px;                            /*Ancho del contenedor*/
-        height: 150px;                          /*Alto del Boton*/
         background-color:  #2c2c83;           /*Color del Fondo*/
         border-radius: 10px;                    /*Redondez de la Esquinas*/
-        padding: 2px 10px;                      /*Espacio interior */
         border: groove;                         /*Elimina el borde predeterminado*/
         font-weight: 500;                       /*Espesor de la Letra*/
-        text-align: center;
+
 }
 
 #pFntMensajeTitulo{
@@ -245,10 +249,13 @@
     border-radius: 10px;                        /*Redondez de la Esquinas*/
     border: groove;                             /*Elimina el borde predeterminado*/
     cursor: pointer;                            /*Cambia el cursor al pasar por arriba*/
-    font-weight: 500;                           /*Espesor de la Letra*/
     background-color: #c7c8d4;                /*Color del Fondo*/
-    text-align: center;
+    font-weight: 500;                           /*Espesor de la Letra*/
+    text-align: center;                         /*Texto Centrado en el Contenedor*/
 }
+/* Fin Especifico Funcion de Mensaje <-------------*/
+
+
 
 /* Estilos Responsivos*/
 @media only screen and (max-width: 650px) {

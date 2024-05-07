@@ -1,3 +1,7 @@
+#asdPrincipal{
+    height: 480px;                            /*Altura del Cotenedor*/
+}
+
 .clsDiv{  
     /*Estilo del Contenedor del Menú*/
     flex:1;                                   /*Hace que el contenedor cresca y ocupe el contenedor*/
@@ -34,7 +38,6 @@
     line-height: 1.2;                       /*Interlineado entre textos*/
     margin: 0;                              /*Define el Margen*/
 }
-
 
 /* Estilos Responsivos*/
 @media only screen and (max-width: 1350px) {

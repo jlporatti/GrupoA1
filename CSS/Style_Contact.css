@@ -1,0 +1,118 @@
+
+#asdPrincipal{
+    height: 480px;                            /*Altura del Cotenedor*/
+}
+
+/* 
+----------------- NO ES NECESARIO ---------------------
+body{
+    background-color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    background-color: #bcbcbf;
+    display: block;
+    margin: 8px;
+} */
+
+.container{
+    background-color: rgb(213, 212, 212);
+    /*background-color: #153b32;*/
+    width: 80%;
+    margin:0px auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border:1px solid gray;
+    color:rgb(73 64 50);
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px gray;
+    max-width: 600px;
+}
+h3{
+    margin:0px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;    
+}
+.caja{
+    display: flex;
+    margin :5px 0px;
+}
+.caja label{
+    flex-basis: 80px;
+}
+.caja input{
+    flex:1;
+    padding: 5px;
+}
+.caja textarea{
+    flex:1;
+    padding: 5px;  
+}
+.caja input :focus{
+    outline: none;
+    border-bottom: 2px solid rgb(126, 124, 121);
+}
+button{
+    background-color: rgb(126, 124, 121);
+    color:#fff;
+    border: none;
+    padding:6px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: all ease 500ms;
+}
+button:hover{
+    background-color:rgb(194, 190, 184);
+    color:#4b4444;
+}
+
+
+/* Inicio Especifico Funcion de Mensaje ------------->*/
+#divFntMensaje{
+    /* Estilo del Contenedor del Resumen*/    
+    /*display: none;                        /*Oculta el contenedor*/
+    width:340px;                            /*Ancho del contenedor*/
+    height: 150px;                          /*Alto del Boton*/
+    top: 50%;                               /*Alineado al centro verticalmente */
+    left: 50%;                              /*Alineado al centro horizontalmente */
+    padding: 2px 10px;                      /*Espacio interior */
+    text-align: center;                     /*Texto Centrado en el contenedor*/
+    position: fixed;                        /*Posicionamiento Fijo*/
+    z-index: 9999;                          /*Lo traigo al Frente de todo*/
+    transform: translate(-50%, -50%);       /*Centro la ventana*/
+    background-color:  #2c2c83;           /*Color del Fondo*/
+    border-radius: 10px;                    /*Redondez de la Esquinas*/
+    border: groove;                         /*Elimina el borde predeterminado*/
+    font-weight: 500;                       /*Espesor de la Letra*/
+}
+
+#pFntMensajeTitulo{
+    font-size: 14px;                                        /*Tamaño Letra*/
+    font-weight: 900;                                       /*Grosor Letrs*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;       /*Tipo Letra*/
+    color: white;                                         /*Color de la Letra*/
+
+}
+#pFntMensaje{
+    font-size: 12px;                                        /*Tamaño Letra*/
+    font-weight: 500;                                       /*Grosor Letrs*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;       /*Tipo Letra*/
+    color: white;                                         /*Color de la Letra*/
+}
+
+#btnFntMensaje{
+/* Estilo de los BOTON del menú*/
+    width: 90px;                                /*Ancho del Boton*/
+    height: 30px;                               /*Alto del Boton*/
+    border-radius: 10px;                        /*Redondez de la Esquinas*/
+    border: groove;                             /*Elimina el borde predeterminado*/
+    cursor: pointer;                            /*Cambia el cursor al pasar por arriba*/
+    background-color: #c7c8d4;                /*Color del Fondo*/
+    font-weight: 500;                           /*Espesor de la Letra*/
+    text-align: center;                         /*Texto Centrado en el Contenedor*/
+}
+/* Fin Especifico Funcion de Mensaje <-------------*/

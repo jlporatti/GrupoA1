@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Imagenes/Favicon.jpg" type="jpg">  
+    <title>Morfemos</title>
+    <link rel="stylesheet" href="/CSS/Style_Estandar.css">
+    <link rel="stylesheet" href="/CSS/Style_Contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <header id="hdrHeader">
+        <div id="divHeader">
+            <h1 id="h1Empresa">Morfemos.com</h1>
+            <br>
+            <h4 id="h4Descripcion">Alta cocina desde la comodidad de tu casa!!!</h4>
+        </div>
+        <img id="imgLogo" src="./Imagenes/Logo.jpg" alt="Logotipo de tu Empresa">
+    </header>
+    <div id="divMenu">
+        <nav id="navMenu">
+            <a class="clsAMenuPrincipal" href="index.html">Inicio</a>
+            <a class="clsAMenuPrincipal" href="productos.html">Productos</a>
+            <a class="clsAMenuPrincipal" href="servicios.html">Servicios</a>
+            <a class="clsAMenuPrincipal" href="contacto.html">Contacto</a>    
+        </nav>
+    </div>
+    <section id="stnPrincipal">    
+        <aside id="asdPrincipal">
+            <div class="container">
+                <h3  class="animate__animated animate__bounceIn">FORMULARIO DE CONTACTO</h3>
+                <form class="formulario"  name="fvalida">
+                <div id="radio1">
+                    <p id="txtconsulta">Tipo de Consulta</p>
+                    <label><input type="radio" name="radio" value="consulta" checked/>Consulta</label>
+                    <label><input type="radio" name="radio" value="reclamo"/>Reclamo</label>
+                    <label><input type="radio" name="radio" value="sugerencia"/>Sugerencia</label>
+                </div>
+                    <div class="caja">
+                        <label>Nombre: </label>
+                        <input type="text" placeholder="Ingrese su nombre" id="nombre" name="nombre">
+                    </div>
+                    <div class="caja">
+                        <label>Email: </label>
+                        <input id="iptEmail" type="email" placeholder="Ingrese su correo" id="correo" name="correo"></div>
+                    <div class="caja">
+                        <label>Consulta: </label>
+                        <textarea  cols="32" rows="4" id="consulta" name="consulta"></textarea>
+                    </div>
+                    <button type="button"  onclick="valida_enviar()">ENVIAR</button>
+                    
+                </form>
+                <p id="mensajeError"></p>
+            </div>
+        </aside>
+    </section>
+
+    <footer id="ftrPagina">
+        <div id="divDireccion">
+            <p>Comisión: 24173 - Grupo: A1</p>
+            <p>Integrantes:  Poratti Jorge - Carrasco Alejandro - Paglione Victoria</p>
+        </div>
+        <div id="divMensaje">
+            <p id="pAviso"></p> 
+         <p id="pMensaje"></p> 
+        </div>
+    </footer>
+        
+    <!--Archivos JavaScript-->
+    <script src="./JavaScript/funciones.js"></script>
+    <script src="/JavaScript/contacto.js"></script>
+
+        <!-- // <script>
+        //     function valida_enviar(){
+                
+        //         if (document.fvalida.nombre.value.length==0){
+        //                alert("Tiene que escribir su nombre");
+        //                document.fvalida.nombre.focus();
+        //                return 0;
+        //         }
+             
+        //         if (document.fvalida.correo.value.length==0){
+        //                alert("Tiene que escribir su email");
+        //                document.fvalida.correo.focus();
+        //                return 0;
+        //         }
+                
+        //         if (document.fvalida.consulta.value.trim() ==''){
+        //                alert("Debe ingresar su consulta.");
+        //                document.fvalida.consulta.focus();
+        //                return 0;
+        //         }
+             
+        //         //el formulario se envia
+                
+        //         alert('Tipo de Consulta = '+ document.fvalida.radio.value+"\n"+'Nombre = ' + document.fvalida.nombre.value+"\n"+'Email = ' + document.fvalida.correo.value+"\n"+'Consulta = ' + document.fvalida.consulta.value);
+        //         document.fvalida.submit();
+        //  }
+        // </script> -->
+</body>
+
+</html>

@@ -1,13 +1,30 @@
 //--------------------------------------------Hoja Productos - Variables Globales ----------------------------------------
+class Producto {
+    constructor( etqTitulo, titulo, etqDescripcion, descripcion, etqPrecio, precio, etqCantidad, cantidad=0){
+
+        this.etqTitulo = etqTitulo;
+        this.titulo = titulo;
+        this.etqDescripcion = etqDescripcion;
+        this.descripcion = descripcion;
+        this.etqPrecio = etqPrecio;
+        this.precio = precio;
+        this.etqCantidad = etqCantidad;
+        this.cantidad = cantidad;
+
+    };
+};
+
 // Array que define el Carrito de Compra
 let menus = [];
-menus[1] = {etqTitulo: "h3TitMenu1", titulo: "Opcion 1", etqDescripcion: "pDescripcion1", descripcion: "Suprema Frita con Papas al Horno y Radicheta", etqPrecio: "pPrecio1", precio: 6500, etqCantidad: "spnCantidad1", cantidad: 0};
-menus[2] = {etqTitulo: "h3TitMenu2", titulo: "Opcion 2", etqDescripcion: "pDescripcion2", descripcion: "Suprema Frita con Papas al Horno y Radicheta", etqPrecio: "pPrecio2", precio: 6500, etqCantidad: "spnCantidad2", cantidad: 0};
-menus[3] = {etqTitulo: "h3TitMenu3", titulo: "Opcion 3", etqDescripcion: "pDescripcion3", descripcion: "Suprema Frita con Papas al Horno y Radicheta", etqPrecio: "pPrecio3", precio: 6500, etqCantidad: "spnCantidad3", cantidad: 0};
-menus[4] = {etqTitulo: "h3TitMenu4", titulo: "Opcion 4", etqDescripcion: "pDescripcion4", descripcion: "Suprema Frita con Papas al Horno y Radicheta", etqPrecio: "pPrecio4", precio: 6500, etqCantidad: "spnCantidad4", cantidad: 0};
-menus[5] = {etqTitulo: "h3TitMenu5", titulo: "Opcion 5", etqDescripcion: "pDescripcion5", descripcion: "Sorrentinos de Jamon y Queso con Salsa al Pesto", etqPrecio: "pPrecio5", precio: 7000, etqCantidad: "spnCantidad5", cantidad: 0};
-menus[6] = {etqTitulo: "h3TitMenu6", titulo: "Opcion 6", etqDescripcion: "pDescripcion6", descripcion: "Pechuga rellena con Hongos, Espinaca y Jamon", etqPrecio: "pPrecio6", precio: 7500, etqCantidad: "spnCantidad6", cantidad: 0};
-menus[7] = {etqTitulo: "h3TitMenu7", titulo: "Opcion 7", etqDescripcion: "pDescripcion7", descripcion: "Fideos al Huevo con Salsa Pesto, cherry mosarella", etqPrecio: "pPrecio7", precio: 4000, etqCantidad: "spnCantidad7", cantidad: 0};
+
+menus.push( new Producto( "h3TitMenu1", "Opcion 1", "pDescripcion1", "Suprema Frita con Papas al Horno y Radicheta", "pPrecio1", 6500, "spnCantidad1", 0),
+            new Producto( "h3TitMenu2", "Opcion 2", "pDescripcion2", "Suprema Frita con Papas al Horno y Radicheta", "pPrecio2", 6500, "spnCantidad2", 0),
+            new Producto( "h3TitMenu3", "Opcion 3", "pDescripcion3", "Suprema Frita con Papas al Horno y Radicheta", "pPrecio3", 6500, "spnCantidad3", 0),
+            new Producto( "h3TitMenu4", "Opcion 4", "pDescripcion4", "Suprema Frita con Papas al Horno y Radicheta", "pPrecio4", 6500, "spnCantidad4", 0),
+            new Producto( "h3TitMenu5", "Opcion 5", "pDescripcion5", "Sorrentinos de Jamon y Queso con Salsa al Pesto", "pPrecio5", 7000, "spnCantidad5", 0),
+            new Producto( "h3TitMenu6", "Opcion 6", "pDescripcion6", "Pechuga rellena con Hongos, Espinaca y Jamon", "pPrecio6", 7500, "spnCantidad6", 0),
+            new Producto( "h3TitMenu7", "Opcion 7", "pDescripcion7", "Fideos al Huevo con Salsa Pesto, cherry mosarella", "pPrecio7", 4500, "spnCantidad7", 0) );
+
 
 
 //----------------------------------------- Hoja Productos - Inicialización ----------------------------------------------
@@ -23,8 +40,8 @@ window.onload = () => {
 
 
 //------------------------------------- Hoja Productos - Botón Agregar y Sacar Menú --------------------------------------
-// Evento On Click 
-let btnOnClickAgregarSacar=(btn, num) => {        
+// Evento On Click de los Botones Agragar y Sacar Producto
+function btnOnClickAgregarSacar(btn, num){        
     let spnCantidad = document.getElementById("spnCantidad" + num);
     //let divMenu = document.getElementById("divMenu" + num);
     let h3Titulo = document.getElementById("h3TitMenu" + num);
@@ -68,7 +85,8 @@ let btnOnClickAgregarSacar=(btn, num) => {
 
 
 //-------------------------------------- Hoja Productos - Pantalla Resumen ----------------------------------------------
-let iniciaResumen = () => {
+function iniciaResumen()  
+{
     //Inicializa las Etiquetas de Datos del Resumen
     document.getElementById("iptNombre").value = "";
     document.getElementById("iptEmail").value = "";
@@ -80,7 +98,8 @@ let iniciaResumen = () => {
 }
 //-------------------------------------- Hoja Productos - Botón Finalizar -----------------------------------------------
 // Evento On Click Boton Finalizar
-let btnOnClickFinalizar=() => {
+function btnOnClickFinalizar() 
+{
     let pedido = "";
     let total = 0;
     iniciaResumen();
@@ -93,7 +112,7 @@ let btnOnClickFinalizar=() => {
     });
 
     // Si el Total es Mayor a cero muestro el pedido
-    if (total>0){
+    if (total>0) {
         pedido += "\nTotal: $" + total;
         document.getElementById("txtResumen").value = pedido;
         document.getElementById("divResumen").style.display = "block"; 
@@ -103,7 +122,8 @@ let btnOnClickFinalizar=() => {
 
 //----------------------------------------- Hoja Productos - Botón Cancelar -------------------------------------------------
 // Evento On Click del Botón Cancelar
-let btnOnClickCancelar=() => {
+function btnOnClickCancelar() 
+{
     // Inicializa Resumen y sale
     iniciaResumen();
     // Oculta la Pantalla de Resumen
@@ -114,7 +134,8 @@ let btnOnClickCancelar=() => {
 
 
 // Evento On Click del Botón Enviar
-let btnOnClickEnviar=() => {
+function btnOnClickEnviar()
+{
 
     let mensaje = "";
     let erreMail = valEMail(document.getElementById("iptEmail").value, false);
@@ -148,7 +169,7 @@ let btnOnClickEnviar=() => {
         fctMensaje( "Falta Ingresar: ", mensaje + ". " + erreMail);
         document.getElementById("pAviso" ).innerHTML = "=>";
         document.getElementById("pAviso" ).style.color = "yelow";
-        document.getElementById("pMensaje" ).innerHTML = mensaje;
+        document.getElementById("pMensaje" ).innerHTML = "Ingresar: " + mensaje;
         document.getElementById("pMensaje" ).style.color = "rgb(237, 55, 55)";
 
     }

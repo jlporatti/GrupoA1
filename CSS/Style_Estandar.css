@@ -86,8 +86,8 @@
 
 #ftrPagina{
     /*Estilo del FOOTER de Pagina*/
-        display: flex;                                      /*Define el modo de visualisación en Flex*/
-        justify-content: space-between;                     /*Reparte el Espacio entre objetos y sus extremos*/
+    display: flex;                                          /*Define el modo de visualisación en Flex*/
+    justify-content: space-between;                         /*Reparte el Espacio entre objetos y sus extremos*/
     background-color: #333;                               /*Color del fondo*/
     color: #fff;                                          /*Color de la letra*/
     /*text-align: center;                                   /*Alineación del texto*/
@@ -123,6 +123,11 @@
     animation: titileo 1s infinite; /* La animación se repite infinitamente */
 }
 
+#divDireccion{
+    line-height: .5;                       /*Interlineado entre textos*/
+}
+
+
 @keyframes titileo {
     0% { opacity: 1; }
     50% { opacity: 0; }
@@ -153,10 +158,12 @@
         /* Estilo de los sub contenedores de la Pantalla*/
         justify-content: space-evenly;          /*Reparte el Espacio entre objetos y sus extremos*/
     }
-
+  
     #ftrPagina{
         /*Estilo del FOOTER de Pagina*/
         display: flex;                          /*Contenedor Flexible al contenido*/
         flex-direction: column-reverse;         /*Cambia a Columna de abajo hacia arriba.*/
     }
+
+
 }

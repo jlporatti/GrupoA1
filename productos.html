@@ -16,6 +16,8 @@
     <title>Document</title>
 </head>
 <body>
+    <!--Inicio Pantalla Principal---------------->
+    <!--Encabesado con Nombre de Empresa y logo-->
     <header id="hdrHeader">
         <div id="divHeader">
             <h1 id="h1Empresa">Morfemos.com</h1>
@@ -24,25 +26,30 @@
         </div>
         <img id="imgLogo" src="./Imagenes/Logo.jpg" alt="Logotipo de tu Empresa">
     </header>
+    
+    <!--Barra de Menú de opciones-->
     <div id="divMenu">
         <nav id="navMenu">
             <a class="clsAMenuPrincipal" href="index.html">Inicio</a>
             <a class="clsAMenuPrincipal" href="productos.html">Productos</a>
-            <a class="clsAMenuPrincipal" href="#">Servicios</a>
-            <a class="clsAMenuPrincipal" href="#">Contacto</a>    
+            <a class="clsAMenuPrincipal" href="servicios.html">Servicios</a>
+            <a class="clsAMenuPrincipal" href="contacto.html">Contacto</a>    
         </nav>
     </div>
-<div id="divTitulo">
-    <h2 id="h2Titulo">Platos del Día</h2>
-    <div id="divTotal">
-        <p id="pMonto">Importe Total: $0</p>
-        <input type="button" ID="btnFinalizar" value="Finalizar" onclick="btnOnClickFinalizar()">
+    
+    <!--Titulo de la pantalla de opciones y totalizador-->
+    <div id="divTitulo">
+        <h2 id="h2Titulo">Platos del Día</h2>
+        <div id="divTotal">
+            <p id="pMonto">Importe Total: $0</p>
+            <input type="button" ID="btnFinalizar" value="Finalizar" onclick="btnOnClickFinalizar()">
+        </div>
     </div>
-</div>
-    <section id="stnPrincipal">
-       
+    
+    <!--Contenedor de los productos que se comercializan-->
+    <section id="stnPrincipal">       
         <aside id="asdPrincipal">
-
+            <!--Items que se comercializan-->
             <div id="divMenu1" class="clsDivMenu">
                 <div class="clsDivFotoMenu">
                     <img class="clsImgFotoMenu" src="./Imagenes/Suprema.jpg" alt="Plato 1">
@@ -58,6 +65,7 @@
                     <input type="button" class="clsBtnSeleccion clsBtnAgregar" value="Agregar" onclick="btnOnClickAgregarSacar(2,1)">
                 </div>
             </div>
+
             <div id="divMenu2" class="clsDivMenu">
                 <div class="clsDivFotoMenu">
                     <img class="clsImgFotoMenu" src="./Imagenes/Suprema.jpg" alt="Plato 2">
@@ -73,6 +81,7 @@
                     <input type="button" class="clsBtnSeleccion  clsBtnAgregar" value="Agregar" onclick="btnOnClickAgregarSacar(2,2)">
                 </div>
             </div>
+
             <div id="divMenu3"  class="clsDivMenu">
                 <div class="clsDivFotoMenu">
                     <img class="clsImgFotoMenu" src="./Imagenes/Suprema.jpg" alt="Plato  3">
@@ -89,6 +98,7 @@
 
                 </div>
             </div>
+
             <div id="divMenu4" class="clsDivMenu">
                 <div class="clsDivFotoMenu">
                     <img class="clsImgFotoMenu" src="./Imagenes/Suprema.jpg" alt="Plato 4">
@@ -104,6 +114,7 @@
                     <input type="button" class="clsBtnSeleccion  clsBtnAgregar" value="Agregar" onclick="btnOnClickAgregarSacar(2,4)">
                 </div>
             </div>
+
             <div id="divMenu5" class="clsDivMenu">
                 <div class="clsDivFotoMenu">
                     <img class="clsImgFotoMenu" src="./Imagenes/Sorrentinos.jpg" alt="Plato 5">
@@ -135,6 +146,7 @@
                     <input type="button" class="clsBtnSeleccion clsBtnAgregar" value="Agregar" onclick="btnOnClickAgregarSacar(2,6)">
                 </div>
             </div>
+
             <div id="divMenu7" class="clsDivMenu">
                 <div class="clsDivFotoMenu">
                     <img class="clsImgFotoMenu" src="./Imagenes/Fideos.jpg" alt="Plato 7">
@@ -150,23 +162,26 @@
                     <input type="button" class="clsBtnSeleccion clsBtnAgregar" value="Agregar" onclick="btnOnClickAgregarSacar(2,7)">
                 </div>
             </div>
+
         </aside>
     </section>
+    <!--Pie de Pagina con dirección y mensajes de error-->
     <footer id="ftrPagina">
         <div id="divDireccion">
-            <p>La Ocuridad 25 - CABA </p>
-            <p>Teléfono de contacto: 11 5555-5656</p>
-            <p>Correo electrónico: Consultas@Morfemos.com</p>
+            <p>Comisión: 24173 - Grupo: A1</p>
+            <p>Integrantes:  Poratti Jorge - Carrasco Alejandro - Paglione Victoria</p>
         </div>
         <div id="divMensaje">
             <p id="pAviso"></p> 
             <p id="pMensaje"></p> 
         </div>
     </footer>
+    <!--<-----------------Fin Pantalla Principal-->
 
-    <!-- Patalla Flotante Resumen-->
+    <!--Inicio de la Patalla Secundaria Flotante para Resumen de compra------------>
     <div id="divResumen">
         <div class="clsDivResGrupo">
+            <!--Datos del cliente-->            
             <table>
                 <tr>
                     <td class="clsTblCol1">
@@ -194,6 +209,7 @@
                 </tr>
             </table>
             <br>
+            <!--Direccion de Envio-->            
             <table>
                 <tr>
                     <td class="clsTblCol1">
@@ -223,6 +239,8 @@
                     </td>
                 </tr>
             </table>
+
+            <!--Aclaraciones del cliente-->
             <table>
                 <tr>
                     <td>
@@ -232,6 +250,8 @@
                 </tr>
             </table>
         </div>
+
+        <!--Opciones de Pago-->
         <div class="clsDivResGrupo">    
             <fieldset name="fdsGenero" style="width: 120px; display: inline-block;">
                 <legend>Forma de Pago:</legend>
@@ -245,17 +265,21 @@
             <br>            
         </div>
 
+        <!--Resumen del Pedido-->
         <div id="divTitResPedido">Resumen del Pedido:</div>
         <div ID="divResPedido">
             <textarea  name="txtResumen" id="txtResumen" cols="34" rows="6" readonly></textarea>
         </div>
 
+        <!--Botones de opcion-->
         <div id="divResBotones">
             <input type="button" class="clsBtnSeleccion  clsBtnSacar" value="Cancelar" onclick="btnOnClickCancelar()">
             <input type="button" class="clsBtnSeleccion  clsBtnAgregar" value="Enviar" onclick="btnOnClickEnviar()">
         </div>
     </div>
+    <!-- <-----------------Fin Pantalla Secundaria-->
 
+    <!--Archivos JavaScript-->
     <script src="./JavaScript/funciones.js"></script>
     <script src="./JavaScript/productos.js"></script>
 </body>
