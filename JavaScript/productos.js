@@ -1,43 +1,122 @@
-//--------------------------------------------Hoja Productos - Variables Globales ----------------------------------------
-class Producto {
-    constructor( etqTitulo, titulo, etqDescripcion, descripcion, etqPrecio, precio, etqCantidad, cantidad=0){
-
-        this.etqTitulo = etqTitulo;
-        this.titulo = titulo;
-        this.etqDescripcion = etqDescripcion;
-        this.descripcion = descripcion;
-        this.etqPrecio = etqPrecio;
-        this.precio = precio;
-        this.etqCantidad = etqCantidad;
-        this.cantidad = cantidad;
-
-    };
-};
-
-// Array que define el Carrito de Compra
-let menus = [];
-
-menus.push( new Producto( "h3TitMenu1", "Opcion 1", "pDescripcion1", "Suprema Frita con Papas al Horno y Radicheta", "pPrecio1", 6500, "spnCantidad1", 0),
-            new Producto( "h3TitMenu2", "Opcion 2", "pDescripcion2", "Suprema Frita con Papas al Horno y Radicheta", "pPrecio2", 6500, "spnCantidad2", 0),
-            new Producto( "h3TitMenu3", "Opcion 3", "pDescripcion3", "Suprema Frita con Papas al Horno y Radicheta", "pPrecio3", 6500, "spnCantidad3", 0),
-            new Producto( "h3TitMenu4", "Opcion 4", "pDescripcion4", "Suprema Frita con Papas al Horno y Radicheta", "pPrecio4", 6500, "spnCantidad4", 0),
-            new Producto( "h3TitMenu5", "Opcion 5", "pDescripcion5", "Sorrentinos de Jamon y Queso con Salsa al Pesto", "pPrecio5", 7000, "spnCantidad5", 0),
-            new Producto( "h3TitMenu6", "Opcion 6", "pDescripcion6", "Pechuga rellena con Hongos, Espinaca y Jamon", "pPrecio6", 7500, "spnCantidad6", 0),
-            new Producto( "h3TitMenu7", "Opcion 7", "pDescripcion7", "Fideos al Huevo con Salsa Pesto, cherry mosarella", "pPrecio7", 4500, "spnCantidad7", 0) );
 
 
+//------------------------------------- Hoja Productos - Productos a la Venta --------------------------------------
+function fntAgregaProducto( indice, idCntrPadre)
+{
+    // Agrega el producto segun el indice pasado en el contenedor Padre
+    // Obtengo el contenedor "container"
+    const contenedor = document.getElementById(idCntrPadre);
 
-//----------------------------------------- Hoja Productos - Inicialización ----------------------------------------------
-// Coloca los titulos, descripciones y precios de los menú
-window.onload = () => {
-    // Coloca los Titulos de los Menu
-    menus.forEach(item => {
-        document.getElementById(item.etqTitulo).textContent = item.titulo;
-        document.getElementById(item.etqDescripcion).textContent = item.descripcion;
-        document.getElementById(item.etqPrecio).textContent = item.precio;
+    // Creo el diMenu que contendra los datos del producto
+    const divMenu = document.createElement("div");
+    divMenu.id = "divMenu" + indice;
+    divMenu.classList.add("clsDivMenu");
+
+    // Las agrego al contenedor
+    contenedor.appendChild(divMenu);
+
+    // Creo los 3 div que debe contener el producto (Foto, Descripcion y Botones)
+    // divFoto---->
+    // Creo el Contenedor de la Foto divFoto
+    const divFoto = document.createElement("div");
+    divFoto.classList.add("clsDivFotoMenu");
+
+    // Creo un img para la foto y lo Agrego al divFoto
+    const imgFoto = document.createElement("img");
+    imgFoto.classList.add("clsImgFotoMenu");
+    imgFoto.src = productos[indice].srcFoto;
+    imgFoto.alt = "Foto del Menu 8";
+    divFoto.appendChild(imgFoto);
+
+    // Agrego el divFoto al divMenu
+    divMenu.appendChild(divFoto);
+
+
+    const ctnFotoMenuHD = document.getElementById('divFotoMenuHD');
+    const imgFotoHD = document.getElementById("imgFotoMenuHD");
+
+    // Agrego evento para que al pasar el mouse sobre la imagen muestre una con mayor tamaño
+    imgFoto.addEventListener("mouseover", () => {
+        imgFotoHD.src = productos[indice].srcFotoHD;
+        ctnFotoMenuHD.style.display = 'block';
     });
-};
+    
+    // Agrego evento para que al quitar el mouse de la imagen deje de mostrar la de mayor tamaño
+    imgFoto.addEventListener("mouseout", () => {
+        ctnFotoMenuHD.style.display = 'none';
+    });
+    // divFoto<----
 
+    // divDesc--->
+    // Creo el Contenedor de la Descripción divDesc
+    const divDesc = document.createElement("div");
+    divDesc.classList.add("clsDivDescMenu");
+
+    // Creo un h3 para el Titulo y lo Agrego al divDesc
+    const h3Tit = document.createElement("h3");
+    h3Tit.id = "h3TitMenu" + indice;
+    h3Tit.classList.add("clsH3TitMenu");
+    h3Tit.innerText = productos[indice].titulo;
+    divDesc.appendChild(h3Tit);
+
+    // Creo un p para la Descripcion y lo Agrego al divDesc
+    const pDesc = document.createElement("p");
+    pDesc.id = "pDescripcion" + indice;
+    pDesc.classList.add("clsPDescripcion");
+    pDesc.innerText = productos[indice].descripcion;
+    divDesc.appendChild(pDesc);
+
+    // Creo un p para el Precio y lo Agrego al divDesc
+    const pPcio = document.createElement("p");
+    pPcio.id = "pPrecio" + indice;
+    pPcio.classList.add("clsPPrecio");
+    pPcio.innerText = productos[indice].precio;
+    divDesc.appendChild(pPcio);
+
+    // Las agrego al divMenu
+    divMenu.appendChild(divDesc);
+    //<--- divDesc
+
+    //---> divBtn
+    // Creo el Contenedor de los Botones divBtn
+    const divBtn = document.createElement("div");
+    divBtn.classList.add("clsDivBotonMenu")
+
+    // Creo Boton Sacar y lo Agrego al divBtn
+    const impBtnSacar = document.createElement("input");
+    impBtnSacar.type = "button";
+    impBtnSacar.classList.add("clsBtnSeleccion");
+    impBtnSacar.classList.add("clsBtnSacar");
+    impBtnSacar.value = "Sacar";
+
+    impBtnSacar.addEventListener("click", function() {
+        btnOnClickAgregarSacar(1, indice);
+    });
+    divBtn.appendChild(impBtnSacar);
+
+    // Creo la etiqueta para mostrar la Cantidad y la Agrego al divBtn
+    const spnCant = document.createElement("span");
+    spnCant.id = "spnCantidad" + indice;
+    spnCant.innerText = productos[indice].cantidad;
+    spnCant.classList.add("clsSpnCantidad");
+    divBtn.appendChild(spnCant);
+
+    // Creo Boton Agregar y lo Agrego al divBtn
+    const impBtnAgregar = document.createElement("input");
+    impBtnAgregar.type = "button";
+    impBtnAgregar.classList.add("clsBtnSeleccion");
+    impBtnAgregar.classList.add("clsBtnAgregar");
+    impBtnAgregar.value = "Agregar";
+
+    impBtnAgregar.addEventListener("click", function() {
+        btnOnClickAgregarSacar(2, indice);
+    });
+    divBtn.appendChild(impBtnAgregar);
+
+    // Agrego el divBtn al divMenu
+    divMenu.appendChild(divBtn);
+    //<--- divBtn
+}
 
 //------------------------------------- Hoja Productos - Botón Agregar y Sacar Menú --------------------------------------
 // Evento On Click de los Botones Agragar y Sacar Producto
@@ -47,28 +126,28 @@ function btnOnClickAgregarSacar(btn, num){
     let h3Titulo = document.getElementById("h3TitMenu" + num);
 
     // Decremento o Incremento la cantidad segun el boton presionado
-    if (( menus[num].cantidad > 0) && (btn === 1))
+    if (( productos[num].cantidad > 0) && (btn === 1))
     {
-        menus[num].cantidad = menus[num].cantidad - 1;
+        productos[num].cantidad = productos[num].cantidad - 1;
 
     } else if  (btn === 2)
     {
-        menus[num].cantidad = menus[num].cantidad + 1;
+        productos[num].cantidad = productos[num].cantidad + 1;
 
     }
     // Actualizo la cantidad seleccionada
-    spnCantidad.innerHTML = menus[num].cantidad;
+    spnCantidad.innerText = productos[num].cantidad;
 
     // Cambio el fondo dependiendo de si hay productos seleccionados
-    if (menus[num].cantidad > 0)
+    if (productos[num].cantidad > 0)
     {
-        h3Titulo.innerHTML=" Opción " + num + "- Seleccionada";
+        h3Titulo.innerText= productos[num].titulo + "- Seleccionada";
         h3Titulo.style.color = "lightseagreen";
         //divMenu.style.backgroundColor = "rgb(73, 155, 120)"; 
 
     }
     else {
-        h3Titulo.innerHTML=" Opción " + num;
+        h3Titulo.innerText = productos[num].titulo ;
         h3Titulo.style.color = "navy";
         //divMenu.style.backgroundColor = "rgb(152, 171, 192)"; 
         //divMenu.style.backgroundColor = "rgb(213, 212, 212)";
@@ -76,35 +155,24 @@ function btnOnClickAgregarSacar(btn, num){
 
     // Calculo el Total
     let total = 0;
-    menus.forEach(item => {
+    productos.forEach(item => {
         total += item.precio * item.cantidad;
     });
 
-    pMonto.innerHTML = "Importe Total: $"+ total.toLocaleString();
+    pMonto.innerText = "Importe Total: $"+ total.toLocaleString();
 }
 
 
 //-------------------------------------- Hoja Productos - Pantalla Resumen ----------------------------------------------
-function iniciaResumen()  
-{
-    //Inicializa las Etiquetas de Datos del Resumen
-    document.getElementById("iptNombre").value = "";
-    document.getElementById("iptEmail").value = "";
-    document.getElementById("iptTelefono").value = "";
-    document.getElementById("iptDireccion1" ).value = "";
-    document.getElementById("iptDireccion2" ).value = "";
-    document.getElementById("sltBarrio" ).value = "";
-    document.getElementById("txtAreaAclaraciones").value = "";
-}
 //-------------------------------------- Hoja Productos - Botón Finalizar -----------------------------------------------
 // Evento On Click Boton Finalizar
 function btnOnClickFinalizar() 
 {
     let pedido = "";
     let total = 0;
-    iniciaResumen();
+    fntIniciaResumen();
     // Arma el pedido a mostrar y calcula total
-    menus.forEach(item => {
+    productos.forEach(item => {
         if (item.cantidad > 0){
             pedido += item.cantidad + " x " + item.titulo + " Importe: $" + item.precio * item.cantidad + "\n";
             total += item.precio * item.cantidad;
@@ -125,11 +193,11 @@ function btnOnClickFinalizar()
 function btnOnClickCancelar() 
 {
     // Inicializa Resumen y sale
-    iniciaResumen();
+    fntIniciaResumen();
     // Oculta la Pantalla de Resumen
     document.getElementById("divResumen").style.display = "none"; 
-    document.getElementById("pAviso" ).innerHTML = "";
-    document.getElementById("pMensaje" ).innerHTML ="";
+    document.getElementById("pAviso" ).innerText = "";
+    document.getElementById("pMensaje" ).innerText ="";
 }
 
 
@@ -167,26 +235,26 @@ function btnOnClickEnviar()
     if (mensaje.length != "" )
     {
         fctMensaje( "Falta Ingresar: ", mensaje + ". " + erreMail);
-        document.getElementById("pAviso" ).innerHTML = "=>";
+        document.getElementById("pAviso" ).innerText = "=>";
         document.getElementById("pAviso" ).style.color = "yelow";
-        document.getElementById("pMensaje" ).innerHTML = "Ingresar: " + mensaje;
+        document.getElementById("pMensaje" ).innerText = "Ingresar: " + mensaje;
         document.getElementById("pMensaje" ).style.color = "rgb(237, 55, 55)";
 
     }
     else{
         // No Hay errores
         // Coloca Cantidad en cero y los titulos de los menu
-        menus.forEach(item=> {
-            item.cantidad = 0;
-            document.getElementById(item.etqCantidad).innerHTML = 0;
-
-            document.getElementById(item.etqTitulo).innerHTML = item.titulo;
-            document.getElementById(item.etqTitulo).style.color = "navy";
-        });
+        for (let i = 0; i < productos.length; i++) {
+            productos[i].cantidad = 0;
+            document.getElementById("spnCantidad" + i).innerText = 0;
+            document.getElementById("h3TitMenu" + i).innerText = productos[i].titulo;
+            document.getElementById("h3TitMenu" + i).style.color = "navy";
+            
+        }
 
         // Muestra Total en cero
         let total = 0;
-        pMonto.innerHTML = "Importe Total: $"+ total.toLocaleString();
+        pMonto.innerText = "Importe Total: $"+ total.toLocaleString();
 
         document.getElementById("iptNombre").value = "";
         document.getElementById("iptEmail").value = "";
@@ -198,48 +266,70 @@ function btnOnClickEnviar()
         
         // Oculta la Pantalla de Resumen
         document.getElementById("divResumen").style.display = "none"; 
-        // document.getElementById("pAviso" ).innerHTML = "";
-        // document.getElementById("pMensaje" ).innerHTML ="";
+        // document.getElementById("pAviso" ).innerText = "";
+        // document.getElementById("pMensaje" ).innerText ="";
         fctMensaje( "", "Pedido Solicitado Correctamente!!!!");
-        document.getElementById("pAviso" ).innerHTML = "=>";
+        document.getElementById("pAviso" ).innerText = "=>";
         document.getElementById("pAviso" ).style.color = "green";
-        document.getElementById("pMensaje" ).innerHTML = "Pedido Solicitado Correctamente!!!!";
+        document.getElementById("pMensaje" ).innerText = "Pedido Solicitado Correctamente!!!!";
         document.getElementById("pMensaje" ).style.color = "rgb(237, 55, 55)";   
 
     }
 }
 
-
-
-/*
-// Defino y asigno variable para el Div Resumen
-let divResumen = document.getElementById('divResumen');
-
-// Variables para la Posición inicial del mouse
-let posX, posY;
-
-// Inicio del Movimiento del Div
-let iniMovimientoDiv=(e) => {
-    posX = e.clientX - divResumen.getBoundingClientRect().left;
-    posY = e.clientY - divResumen.getBoundingClientRect().top;
-    window.addEventListener('mousemove', movimientoDiv);
-    window.addEventListener('mouseup', finMovimientoDiv);
+function fntIniciaResumen()  
+{
+    //Inicializa las Etiquetas de Datos del Resumen
+    document.getElementById("iptNombre").value = "";
+    document.getElementById("iptEmail").value = "";
+    document.getElementById("iptTelefono").value = "";
+    document.getElementById("iptDireccion1" ).value = "";
+    document.getElementById("iptDireccion2" ).value = "";
+    document.getElementById("sltBarrio" ).value = "";
+    document.getElementById("txtAreaAclaraciones").value = "";
 }
 
-// Movemos el Div cuando se desplaza
-let movimientoDiv=(e) => {
-    divResumen.style.left = (e.clientX - posX) + 'px';
-    divResumen.style.top = (e.clientY - posY) + 'px';
+
+
+document.addEventListener('mousemove', function(event) {
+    const cntFotoHD = document.getElementById('divFotoMenuHD');
+    const x = event.clientX;
+    const y = event.clientY;
+    
+    cntFotoHD.style.left = x + 'px';
+    cntFotoHD.style.top = y + 'px';
+});
+
+//--------------------------------------------Hoja Productos - Variables Globales ----------------------------------------
+class Producto {
+    constructor( srcFotoHD, srcFoto, titulo, descripcion, precio, cantidad=0){
+        this.srcFotoHD = srcFotoHD;
+        this.srcFoto= srcFoto;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.cantidad = cantidad;
+
+    };
+};
+
+
+
+// Array que define el Carrito de Compra
+let productos = [];
+productos.push( new Producto( "./Imagenes/HR/RevueltoGramajo.jpg", "./Imagenes/RevueltoGramajo.jpg", "Opcion 1", "Revuelto de Jamon, Queso, Huevo y Papas Fritas", 4500, 0),
+            new Producto( "./Imagenes/HR/TortillaEspañola.jpg", "./Imagenes/TortillaEspañola.jpg","Opcion 2", "Tortilla de Papas y Huevos a la Española", 4500, 0),
+            new Producto( "./Imagenes/HR/PechugaCordonBleu.jpg", "./Imagenes/PechugaCordonBleu.jpg", "Opcion 3", "Pechuga de pollo rellena con hongos y morron", 6500, 0),
+            new Producto( "./Imagenes/HR/Suprema.jpg", "./Imagenes/Suprema.jpg","Opcion 4", "Suprema Frita con Papas al Horno y Radicheta", 6500, 0),
+            new Producto( "./Imagenes/HR/Sorrentinos.jpg", "./Imagenes/Sorrentinos.jpg","Opcion 5", "Sorrentinos de Jamon y Queso con Salsa al Pesto", 7000, 0),
+            new Producto( "./Imagenes/HR/PolloRelleno.jpg", "./Imagenes/PolloRelleno.jpg","Opcion 6", "Pechuga rellena con Hongos, Espinaca y Jamon", 7500, 0),
+            new Producto( "./Imagenes/HR/Fideos.jpg","./Imagenes/Fideos.jpg", "Opcion 7", "Fideos al Huevo con Salsa Pesto, cherry mosarella", 4500,  0),
+            new Producto( "./Imagenes/HR/Malfati.jpg","./Imagenes/Malfati.jpg", "Opcion 8", "Malfati de ricota y espinaca con salsa a elección", 4500, 0) );
+
+
+
+
+//Agrega al DOM los Productos definidos en el menus
+for (let i = 0; i < productos.length; i++) {
+    fntAgregaProducto(i, "asdPrincipal" );    
 }
-
-// Fin del movimiento del div
-let finMovimientoDiv = () => {
-    window.removeEventListener('mousemove', movimientoDiv);
-    window.removeEventListener('mouseup', finMovimientoDiv);
-}
-
-// Inicia el movimiento cuando se hace clic en el div
-divResumen.addEventListener('mousedown', iniMovimientoDiv);
-*/
-
-

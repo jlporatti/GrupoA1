@@ -49,122 +49,16 @@
     <!--Contenedor de los productos que se comercializan-->
     <section id="stnPrincipal">       
         <aside id="asdPrincipal">
-            <!--Items que se comercializan-->
-            <div id="divMenu1" class="clsDivMenu">
-                <div class="clsDivFotoMenu">
-                    <img class="clsImgFotoMenu" src="./Imagenes/Suprema.jpg" alt="Plato 1">
-                </div>
-                <div class="clsDivDescMenu">
-                    <h3 id="h3TitMenu1" class="clsH3TitMenu">Opción 1</h3>
-                    <p id="pDescripcion1" class="clsPDescripcion">Suprema Frita con Papas al Horno y Radicheta</p>
-                    <p id="pPrecio1" class="clsPPrecio">$ 6500</p>
-                </div>
-                <div class="clsDivBotonMenu">
-                    <input type="button" class="clsBtnSeleccion clsBtnSacar" value="Sacar" onclick="btnOnClickAgregarSacar(1,1)">
-                    <span id="spnCantidad1" class="clsSpnCantidad ">0</span>
-                    <input type="button" class="clsBtnSeleccion clsBtnAgregar" value="Agregar" onclick="btnOnClickAgregarSacar(2,1)">
-                </div>
+            <!--Items que se comercializan. Se agregan desde productos.js--> 
+            <div class="clsFotoMenuHD" id="divFotoMenuHD">
+                <img id="imgFotoMenuHD" src="" alt="Imagen ampliada">
             </div>
-
-            <div id="divMenu2" class="clsDivMenu">
-                <div class="clsDivFotoMenu">
-                    <img class="clsImgFotoMenu" src="./Imagenes/Suprema.jpg" alt="Plato 2">
-                </div>
-                <div class="clsDivDescMenu">
-                    <h3 id="h3TitMenu2" class="clsH3TitMenu">Opción 1</h3>
-                    <p id="pDescripcion2" class="clsPDescripcion">Suprema Frita con Papas al Horno y Radicheta</p>
-                    <p id="pPrecio2" class="clsPPrecio">$ 6500</p>
-                </div>
-                <div class="clsDivBotonMenu">
-                    <input type="button" class="clsBtnSeleccion clsBtnSacar" value="Sacar" onclick="btnOnClickAgregarSacar(1,2)">
-                    <span id="spnCantidad2" class="clsSpnCantidad ">0</span>
-                    <input type="button" class="clsBtnSeleccion  clsBtnAgregar" value="Agregar" onclick="btnOnClickAgregarSacar(2,2)">
-                </div>
-            </div>
-
-            <div id="divMenu3"  class="clsDivMenu">
-                <div class="clsDivFotoMenu">
-                    <img class="clsImgFotoMenu" src="./Imagenes/Suprema.jpg" alt="Plato  3">
-                </div>
-                <div class="clsDivDescMenu">
-                    <h3 id="h3TitMenu3" class="clsH3TitMenu">Opción 2</h3>
-                    <p id="pDescripcion3" class="clsPDescripcion">Suprema Frita con Papas al Horno y Radicheta</p>
-                    <p id="pPrecio3" class="clsPPrecio">$ 6500</p>
-                </div>
-                <div class="clsDivBotonMenu">
-                    <input type="button" class="clsBtnSeleccion clsBtnSacar" value="Sacar" onclick="btnOnClickAgregarSacar(1,3)">
-                    <span id="spnCantidad3" class="clsSpnCantidad ">0</span>
-                    <input type="button" class="clsBtnSeleccion  clsBtnAgregar" value="Agregar" onclick="btnOnClickAgregarSacar(2,3)">
-
-                </div>
-            </div>
-
-            <div id="divMenu4" class="clsDivMenu">
-                <div class="clsDivFotoMenu">
-                    <img class="clsImgFotoMenu" src="./Imagenes/Suprema.jpg" alt="Plato 4">
-                </div>
-                <div class="clsDivDescMenu">
-                    <h3 id="h3TitMenu4" class="clsH3TitMenu">Opción 3</h3>
-                    <p id="pDescripcion4" class="clsPDescripcion">Suprema Frita con Papas al Horno y Radicheta</p>
-                    <p id="pPrecio4" class="clsPPrecio">$ 6500</p>
-                </div>
-                <div class="clsDivBotonMenu">
-                    <input type="button" class="clsBtnSeleccion clsBtnSacar" value="Sacar" onclick="btnOnClickAgregarSacar(1,4)">
-                    <span id="spnCantidad4" class="clsSpnCantidad ">0</span>
-                    <input type="button" class="clsBtnSeleccion  clsBtnAgregar" value="Agregar" onclick="btnOnClickAgregarSacar(2,4)">
-                </div>
-            </div>
-
-            <div id="divMenu5" class="clsDivMenu">
-                <div class="clsDivFotoMenu">
-                    <img class="clsImgFotoMenu" src="./Imagenes/Sorrentinos.jpg" alt="Plato 5">
-                </div>
-                <div class="clsDivDescMenu">
-                    <h3 id="h3TitMenu5" class="clsH3TitMenu">Opcion 4</h3>
-                    <p id="pDescripcion5" class="clsPDescripcion">Sorrentinos de Jamon y Queso con Salsa al Pesto</p>
-                    <p id="pPrecio5" class="clsPPrecio">$ 7000</p>
-                </div>
-                <div class="clsDivBotonMenu">
-                    <input type="button" class="clsBtnSeleccion clsBtnSacar" value="Sacar" onclick="btnOnClickAgregarSacar(1,5)">
-                    <span id="spnCantidad5" class="clsSpnCantidad ">0</span>
-                    <input type="button" class="clsBtnSeleccion  clsBtnAgregar" value="Agregar" onclick="btnOnClickAgregarSacar(2,5)">
-                </div>
-            </div>
-
-            <div id="divMenu6" class="clsDivMenu">
-                <div class="clsDivFotoMenu">
-                    <img class="clsImgFotoMenu" src="./Imagenes/PolloRelleno.jpg" alt="Plato 6">
-                </div>
-                <div class="clsDivDescMenu">
-                    <h3 id="h3TitMenu6" class="clsH3TitMenu">Opción 5</h3>
-                    <p id="pDescripcion6" class="clsPDescripcion">Pechuga rellena con Hongos, Espinaca y Jamon</p>
-                    <p id="pPrecio6" class="clsPPrecio">$ 7500</p>
-                </div>
-                <div class="clsDivBotonMenu">
-                    <input type="button" class="clsBtnSeleccion clsBtnSacar" value="Sacar" onclick="btnOnClickAgregarSacar(1,6)">
-                    <span id="spnCantidad6" class="clsSpnCantidad ">0</span>
-                    <input type="button" class="clsBtnSeleccion clsBtnAgregar" value="Agregar" onclick="btnOnClickAgregarSacar(2,6)">
-                </div>
-            </div>
-
-            <div id="divMenu7" class="clsDivMenu">
-                <div class="clsDivFotoMenu">
-                    <img class="clsImgFotoMenu" src="./Imagenes/Fideos.jpg" alt="Plato 7">
-                </div>
-                <div class="clsDivDescMenu">
-                    <h3 id="h3TitMenu7" class="clsH3TitMenu">Opción 6</h3>
-                    <p id="pDescripcion7" class="clsPDescripcion">Fideos al Huevo con Salsa Pesto, cherry mosarella</p>
-                    <p id="pPrecio7" class="clsPPrecio">$ 4000</p>
-                </div>
-                <div class="clsDivBotonMenu">
-                    <input type="button" class="clsBtnSeleccion clsBtnSacar" value="Sacar" onclick="btnOnClickAgregarSacar(1,7)">
-                    <span id="spnCantidad7" class="clsSpnCantidad ">0</span>
-                    <input type="button" class="clsBtnSeleccion clsBtnAgregar" value="Agregar" onclick="btnOnClickAgregarSacar(2,7)">
-                </div>
-            </div>
-
         </aside>
+        
     </section>
+
+
+
     <!--Pie de Pagina con dirección y mensajes de error-->
     <footer id="ftrPagina">
         <div id="divDireccion">

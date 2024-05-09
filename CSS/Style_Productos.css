@@ -70,6 +70,29 @@
     height: 70%;                            /*Altura del Cotenedor*/
     border-radius: 50%;                     /*Redondeo de esquinas*/
 }
+    
+
+.clsFotoMenuHD {
+    /*Estilo del Contenedor de la Foto HD*/
+    width: 400px;                        /*Ancho del contenedor*/
+    height: auto;                        /*Altura del Contenedor*/
+    background-color: gray;            /*Color Fondo*/
+    border: 5px solid black;           /*Borde opcional */
+    position: fixed;                     /*Posicionamiento Fijo*/
+    z-index: 9999;                       /*Lo traigo al Frente de todo*/
+    border-radius:50%;                   /*Redondeo de esquinas*/
+    /*top: 50%;                            /*Posición desde Arriba*/
+    /*left: 50%;                           /*Posición desde Izquierda*/
+    transform: translate(-50%, -50%);    /*Centrado desde la posición Actual*/
+}
+
+/* Estilo adicional para el efecto de transición */
+#imgFotoMenuHD {
+    /*Estilo de la Foto HD*/
+    border-radius:50%;                  /*Redondeo de esquinas*/
+    width: 400px;                        /*Ancho del contenedor*/
+    height: auto;                        /*Altura del Contenedor*/
+}
 
 .clsDivDescMenu {
     /* Estilo de la celdas de la tabla correspondiente a la DESCRIPCION del menú*/
