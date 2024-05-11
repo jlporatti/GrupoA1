@@ -74,6 +74,7 @@
 
 .clsFotoMenuHD {
     /*Estilo del Contenedor de la Foto HD*/
+    display: none;                       /*Oculta el Contenedor*/
     width: 400px;                        /*Ancho del contenedor*/
     height: auto;                        /*Altura del Contenedor*/
     background-color: gray;            /*Color Fondo*/
@@ -81,8 +82,8 @@
     position: fixed;                     /*Posicionamiento Fijo*/
     z-index: 9999;                       /*Lo traigo al Frente de todo*/
     border-radius:50%;                   /*Redondeo de esquinas*/
-    /*top: 50%;                            /*Posición desde Arriba*/
-    /*left: 50%;                           /*Posición desde Izquierda*/
+    /*top: 50%;                          /*Posición desde Arriba*/
+    /*left: 50%;                         /*Posición desde Izquierda*/
     transform: translate(-50%, -50%);    /*Centrado desde la posición Actual*/
 }
 

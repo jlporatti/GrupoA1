@@ -143,14 +143,10 @@ function btnOnClickAgregarSacar(btn, num){
     {
         h3Titulo.innerText= productos[num].titulo + "- Seleccionada";
         h3Titulo.style.color = "lightseagreen";
-        //divMenu.style.backgroundColor = "rgb(73, 155, 120)"; 
-
     }
     else {
         h3Titulo.innerText = productos[num].titulo ;
         h3Titulo.style.color = "navy";
-        //divMenu.style.backgroundColor = "rgb(152, 171, 192)"; 
-        //divMenu.style.backgroundColor = "rgb(213, 212, 212)";
     }
 
     // Calculo el Total
@@ -266,8 +262,6 @@ function btnOnClickEnviar()
         
         // Oculta la Pantalla de Resumen
         document.getElementById("divResumen").style.display = "none"; 
-        // document.getElementById("pAviso" ).innerText = "";
-        // document.getElementById("pMensaje" ).innerText ="";
         fctMensaje( "", "Pedido Solicitado Correctamente!!!!");
         document.getElementById("pAviso" ).innerText = "=>";
         document.getElementById("pAviso" ).style.color = "green";
