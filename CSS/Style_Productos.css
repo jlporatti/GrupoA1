@@ -54,8 +54,6 @@
     text-align: center;                       /*Alineación del texcto*/
     border-radius: 20px;
     background: rgb(213, 212, 212);         /*Color del Fondo*/ 
-    /*border-style: solid;                    /*Borde del Recuadro*/
-    /*background-color: rgb(152, 171, 192);   /*Color del Fondo*/
 }    
 
 .clsDivFotoMenu {
@@ -82,8 +80,6 @@
     position: fixed;                     /*Posicionamiento Fijo*/
     z-index: 9999;                       /*Lo traigo al Frente de todo*/
     border-radius:50%;                   /*Redondeo de esquinas*/
-    /*top: 50%;                          /*Posición desde Arriba*/
-    /*left: 50%;                         /*Posición desde Izquierda*/
     transform: translate(-50%, -50%);    /*Centrado desde la posición Actual*/
 }
 

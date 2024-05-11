@@ -2,58 +2,64 @@
   height: 480px;                            /*Altura del Cotenedor*/
 }
 
-/* header{
-  LO DESACTIVE POR QUE CAMBIA EL DICSEÑO FIJADO EN EL ESTANDAR PARA QUE TODAS LAS PAGINAS QUEDEN IGUALES.
-  background-color: black;
-  color:aliceblue
-} */
-
-.container{
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  
- margin-top: 5px;;
-  border-top:5px;
-}
-.gris{
-  background-color:rgba(191, 191, 191, 0.805) ;
-  border:5px solid aliceblue;
+#divPrincipal{
+  display: flex;                            /*Modo de ajuste del contenido*/
+  width: 100%;                              /*Ancho del Cotenedor*/
+  height: 100%;                             /*Altura del Cotenedor*/
 }
 
-
-/*
-ESTO LO AGREGASTE PARA COMPENZAR EL MENU QUE SE DESACOMODA
-#navMenu{
-  padding-top:1px;
-  padding-bottom:15px;
-}
-*/
-
-.foto1{
-  color:black;
-  background-color: rgb(173, 173, 171);
+#divTextos{
+  background-color: #95969f;            /*Color del Fondo*/ 
+  width: 30%;                               /*Ancho del Cotenedor*/
+  height: 100%;                             /*Altura del Cotenedor*/
 }
 
-/* 
-NO ES NECESARIO
-body{
-  background-color: aliceblue;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
-  background-color: #bcbcbf;
-  display: block;
-  margin: 8px;
-} */
+#divFotos{
+  display: flex;                            /*Modo de ajuste del contenido*/
+  background-color: #c7c8d4;            /*Color del Fondo*/
+  width: 70%;                               /*Ancho del Cotenedor*/
+  height: 100%;                             /*Altura del Cotenedor*/    
+}
 
-#revisar{
-    /*DESACTIVE LO QUE CAMBIA EL DICSEÑO FIJADO EN EL ESTANDAR PARA QUE TODAS LAS PAGINAS QUEDEN IGUALES.*/
-    /*background-color: aliceblue;*/
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
-    /*background-color: #bcbcbf;
-    display: block;*/
-    /*Margin: 8px;*/
+#imgFoto{  
+  max-width: 100%;                                    /* Imagen ajustada al Ancho del contenedor */
+  max-height: 100%;                                   /* Imagen ajustada al Alto del contenedor */
+  display: block;                                     /* Imagen sin espacios adicionales */
+  margin: auto;                                       /* Para centrar la imagen */
+}
+
+#hTituloFoto{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;   /*Tipo Letra*/
+  font-size: 30px;                                    /*Tamaño Letra*/
+  color: brown  ;                                   /*Color de la Letra*/
+  margin-top: 30%;
+}
+
+#pDescFoto{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;   /*Tipo Letra*/
+  font-size: 20px;                                    /*Tamaño Letra*/
+  color:brown  ;                               /*Color de la Letra*/
+}
+
+/* Estilos Responsivos*/
+@media only screen and (max-width: 650px) {
+  /*Estilo para celular*/
+
+  #divPrincipal{
+    flex-direction: column;                    /*Cambio a modo columna*/
   }
+
+  #divTextos{
+    width: 100%;                               /*Ancho del Cotenedor*/
+    height: 35%;                               /*Altura del Cotenedor*/
+  }
+  
+  #divFotos{
+    width: 100%;                               /*Ancho del Cotenedor*/
+    height: 65%;                               /*Altura del Cotenedor*/    
+  }
+
+  #hTituloFoto{
+    margin-top: 5%;                            /*Ajusta el Margen*/
+  }
+}
