@@ -4,12 +4,18 @@ var tiempoEntreFotos = 5000;
 
 // Función para cambiar la imagen automáticamente
 function fntCambiarImagen() {
-    imgFoto.src = fotos[inAut].dir;
-    imgFoto.alt = fotos[inAut].imagen;
+    let foto = document.getElementById("imgFoto");
+    foto.src = fotos[inAut].dir;
+    foto.alt = fotos[inAut].imagen;
     document.getElementById("hTituloFoto").innerText = fotos[inAut].titulo;
     document.getElementById("pDescFoto").innerText = fotos[inAut].descripcion;
 
-    // Avanzo al siguiente índice,
+    //imgFoto.src = fotos[inAut].dir;
+    //imgFoto.alt = fotos[inAut].imagen;
+    // hTituloFoto.innerText = fotos[inAut].titulo;
+    // pDescFoto.innerText = fotos[inAut].descripcion;
+
+    // Avanzo al siguiente índice
     inAut = (inAut + 1) % fotos.length;
 
     // Trancurrido el tiempo llama a la finción
@@ -34,10 +40,5 @@ fotos.push(
 
 
 
-
-
-
-
-
-// Inicia el cambio de imágenes
+// Inicio cambio de imágenes y textos
 fntCambiarImagen();

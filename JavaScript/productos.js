@@ -35,16 +35,22 @@ function fntAgregaProducto( indice, idCntrPadre)
     const ctnFotoMenuHD = document.getElementById('divFotoMenuHD');
     const imgFotoHD = document.getElementById("imgFotoMenuHD");
 
-    // Agrego evento para que al pasar el mouse sobre la imagen muestre una con mayor tamaño
-    imgFoto.addEventListener("mouseover", () => {
+    // Agrego evento para que al hacer click muestre una con mayor tamaño y definicion
+    imgFoto.addEventListener("click", () => {
         imgFotoHD.src = productos[indice].srcFotoHD;
-        ctnFotoMenuHD.style.display = 'block';
+        ctnFotoMenuHD.style.display = "block";
+
+    });
+    // Agrego evento para que al hacer click deje de mostrar la imagen con mayor tamaño y definicion
+    imgFotoHD.addEventListener("click", () => {
+        imgFotoHD.src = "";""
+        ctnFotoMenuHD.style.display = 'none';
     });
     
     // Agrego evento para que al quitar el mouse de la imagen deje de mostrar la de mayor tamaño
-    imgFoto.addEventListener("mouseout", () => {
-        ctnFotoMenuHD.style.display = 'none';
-    });
+    // imgFoto.addEventListener("cilck", () => {
+    //     ctnFotoMenuHD.style.display = 'none';
+    // });
     // divFoto<----
 
     // divDesc--->

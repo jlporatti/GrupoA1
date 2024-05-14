@@ -9,23 +9,23 @@
 }
 
 #divTextos{
-  background-color: #95969f;            /*Color del Fondo*/ 
+  background-color: #95969f;              /*Color del Fondo*/ 
   width: 30%;                               /*Ancho del Cotenedor*/
   height: 100%;                             /*Altura del Cotenedor*/
 }
 
 #divFotos{
   display: flex;                            /*Modo de ajuste del contenido*/
-  background-color: #c7c8d4;            /*Color del Fondo*/
+  background-color: #c7c8d4;              /*Color del Fondo*/
   width: 70%;                               /*Ancho del Cotenedor*/
   height: 100%;                             /*Altura del Cotenedor*/    
 }
 
 #imgFoto{  
-  max-width: 100%;                                    /* Imagen ajustada al Ancho del contenedor */
-  max-height: 100%;                                   /* Imagen ajustada al Alto del contenedor */
-  display: block;                                     /* Imagen sin espacios adicionales */
-  margin: auto;                                       /* Para centrar la imagen */
+  max-width: 100%;                          /* Imagen ajustada al Ancho del contenedor */
+  max-height: 100%;                         /* Imagen ajustada al Alto del contenedor */
+  display: block;                           /* Imagen sin espacios adicionales */
+  margin: auto;                             /* Para centrar la imagen */
 }
 
 #hTituloFoto{
@@ -38,7 +38,7 @@
 #pDescFoto{
   font-family: Verdana, Geneva, Tahoma, sans-serif;   /*Tipo Letra*/
   font-size: 20px;                                    /*Tamaño Letra*/
-  color:brown  ;                               /*Color de la Letra*/
+  color:brown  ;                                    /*Color de la Letra*/
 }
 
 /* Estilos Responsivos*/
