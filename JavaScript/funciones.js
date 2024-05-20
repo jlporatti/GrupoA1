@@ -11,8 +11,8 @@ function valEMail(email, mostrar)
     else if (mostrar === true) 
     {
         // Mostrar un mensaje de error
-        fctMensaje( "", mensaje)
-;    }
+        fctMensaje( "", mensaje);
+    }
     return mensaje;
 };
 

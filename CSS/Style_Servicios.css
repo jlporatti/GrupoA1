@@ -28,17 +28,17 @@
   margin: auto;                             /* Para centrar la imagen */
 }
 
-#hTituloFoto{
+.clsTituloFoto{
   font-family: Verdana, Geneva, Tahoma, sans-serif;   /*Tipo Letra*/
   font-size: 30px;                                    /*Tamaño Letra*/
-  color: brown  ;                                   /*Color de la Letra*/
-  margin-top: 30%;
+  color: navy  ;                                   /*Color de la Letra*/
+  margin-top: 5%;
 }
 
-#pDescFoto{
+.clsDescFoto{
   font-family: Verdana, Geneva, Tahoma, sans-serif;   /*Tipo Letra*/
   font-size: 20px;                                    /*Tamaño Letra*/
-  color:brown  ;                                    /*Color de la Letra*/
+  color:navy ;                                    /*Color de la Letra*/
 }
 
 /* Estilos Responsivos*/
