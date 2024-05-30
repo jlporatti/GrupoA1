@@ -139,7 +139,9 @@ function btnOnClickAgregarSacar(btn, num){
     } else if  (btn === 2)
     {
         productos[num].cantidad = productos[num].cantidad + 1;
-
+        // Si hay algun mensaje lo borro
+        document.getElementById("pAviso" ).innerText = "";
+        document.getElementById("pMensaje" ).innerText = "";
     }
     // Actualizo la cantidad seleccionada
     spnCantidad.innerText = productos[num].cantidad;
@@ -186,6 +188,13 @@ function btnOnClickFinalizar()
         pedido += "\nTotal: $" + total;
         document.getElementById("txtResumen").value = pedido;
         document.getElementById("divResumen").style.display = "block"; 
+    }
+    else
+    {
+        document.getElementById("pAviso" ).innerText = "=>";
+        document.getElementById("pAviso" ).style.color = "green";
+        document.getElementById("pMensaje" ).innerText = "No hay Productos Seleccionados";
+        document.getElementById("pMensaje" ).style.color = "rgb(237, 55, 55)";    
     }
 }
 
