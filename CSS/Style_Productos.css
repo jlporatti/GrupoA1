@@ -33,14 +33,14 @@
 }
 
 #btnFinalizar{
-    height: 30px;                           /*Altura Contenedor*/
-    width: 80px;                            /*Ancho del Boton*/
-    background-color: #c7c8d4;            /*Color del Fondo*/
-    border-radius: 10px;                    /*Redondez de la Esquinas*/
-    border: groove;                         /*Elimina el borde predeterminado*/
-    cursor: pointer;                        /*Cambia el cursor al pasar por arriba*/
-    font-weight: 700;                       /*Espesor de la Letra*/
-    color: black;                         /*Color Letras*/
+    height: 30px;                                             /*Altura Contenedor*/
+    width: 80px;                                              /*Ancho del Boton*/
+    background-color: #c7c8d4;                              /*Color del Fondo*/
+    border-radius: 10px;                                      /*Redondez de la Esquinas*/
+    border: groove;                                           /*Elimina el borde predeterminado*/
+    cursor: pointer;                                          /*Cambia el cursor al pasar por arriba*/
+    font-weight: 700;                                         /*Espesor de la Letra*/
+    color: black;                                           /*Color Letras*/
     box-shadow: 0px 4px 6px rgba(0, 0, 0, .8);              /*Agrega sombra*/
     transition: transform 0.3s ease, box-shadow 0.3s ease;    /* Transiciones */
 }
