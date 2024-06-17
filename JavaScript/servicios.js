@@ -34,9 +34,9 @@ let fotos = [];
 
 fotos.push( 
             new foto("Cenas", "./Imagenes/Cenas.jpg","Has que tu cena sea todo un show, nuestro Chef te presenta el plato"),
-            new foto("Envios a Domicilio", "./Imagenes/EnvioDomicilio.jpg", "Si te anotas en nuestra pagina, podemos arreglar comida diaria a la hora que lo deses"),
-            new foto("Reunones", "./Imagenes/Reuniones.jpg","Para esas ocaciones especiales, tenemos los mejores menús con excelentes presentacion"),
-            new foto("Servicio a empresas", "./Imagenes/ViandasEmpresas.jpg", "Comidas variadas por dia, al mejor precio, para toda la empresa o para eventos especiales"))
+            new foto("Envios a Domicilio", "./Imagenes/EnvioDomicilio.jpg", "Si te anotas en nuestra pagina, podemos arreglar comida diaria a la hora que lo desees"),
+            new foto("Reuniones", "./Imagenes/Reuniones.jpg","Para esas ocaciones especiales, tenemos los mejores menús con excelentes presentacion"),
+            new foto("Servicio a Empresas", "./Imagenes/ViandasEmpresas.jpg", "Comidas variadas por dia, al mejor precio, para toda la empresa o para eventos especiales"))
 
 
 
