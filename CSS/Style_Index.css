@@ -20,8 +20,7 @@
 #h2Descripcion{
     /*Estilo del texto descriptivo*/
     text-align: left;                       /*Alineación a Izquierda*/
-    font-family: 'Tangerine', serif;        /*Eleccion del Font*/
-    font-family: 'Lobster', serif;          /*Eleccion del Font*/
+    font-family: 'Amaranth', serif;         /*Eleccion del Font*/
     color: rgb(144, 66, 67);              /*Color del Titulo*/
     font-size: 35px;                        /*Tamaño de la letra*/
     font-weight: 500;                       /*Espedor de la letra*/

@@ -149,7 +149,7 @@ function btnOnClickAgregarSacar(btn, num){
     // Cambio el fondo dependiendo de si hay productos seleccionados
     if (productos[num].cantidad > 0)
     {
-        h3Titulo.innerText= productos[num].titulo + "- Seleccionada";
+        h3Titulo.innerText= productos[num].titulo + " ✓";
         h3Titulo.style.color = "lightseagreen";
     }
     else {
@@ -326,15 +326,15 @@ class Producto {
 
 // Array que define el Carrito de Compra
 let productos = [];
-productos.push( new Producto( "./Imagenes/HR/RevueltoGramajo.jpg", "./Imagenes/RevueltoGramajo.jpg", "Opcion 1", "Revuelto de Jamon, Queso, Huevo y Papas Fritas", 4500, 0),
-            new Producto( "./Imagenes/HR/TortillaEspañola.jpg", "./Imagenes/TortillaEspañola.jpg","Opcion 2", "Tortilla de Papas y Huevos a la Española", 4500, 0),
-            new Producto( "./Imagenes/HR/PechugaCordonBleu.jpg", "./Imagenes/PechugaCordonBleu.jpg", "Opcion 3", "Pechuga de pollo rellena con hongos y morron", 6500, 0),
-            new Producto( "./Imagenes/HR/Suprema.jpg", "./Imagenes/Suprema.jpg","Opcion 4", "Suprema Frita con Papas al Horno y Radicheta", 6500, 0),
-            new Producto( "./Imagenes/HR/Sorrentinos.jpg", "./Imagenes/Sorrentinos.jpg","Opcion 5", "Sorrentinos de Jamon y Queso con Salsa al Pesto", 7000, 0),
-            new Producto( "./Imagenes/HR/PolloRelleno.jpg", "./Imagenes/PolloRelleno.jpg","Opcion 6", "Pechuga rellena con Hongos, Espinaca y Jamon", 7500, 0),
-            new Producto( "./Imagenes/HR/Fideos.jpg","./Imagenes/Fideos.jpg", "Opcion 7", "Fideos al Huevo con Salsa Pesto, cherry mosarella", 4500,  0),
-            new Producto( "./Imagenes/HR/Malfati.jpg","./Imagenes/Malfati.jpg", "Opcion 8", "Malfati de ricota y espinaca con salsa a elección", 4500, 0) );
-
+productos.push( new Producto( "./Imagenes/Tiradito de Pulpo.png", "./Imagenes/Tiradito de Pulpo.png", "Tiradito de Pulpo", "Finas láminas de pulpo español en clásica salsa de oliva del Perú.", 4500, 0),
+            new Producto( "./Imagenes/Ceviche Nikkei.png", "./Imagenes/Ceviche Nikkei.png","Ceviche Nikkei", "Salmón rosado, cebolla morada, choclo, aliño, jengibre, wasabi y salsa de soja con o’nigiris.", 4500, 0),
+            new Producto( "./Imagenes/Entrada Samurai.png", "./Imagenes/Entrada Samurai.png", "Entrada Samurai", "Deliciosos bocaditos de salmón, phila y palta, encintados con alga.", 6500, 0),
+            new Producto( "./Imagenes/Gran Dashi.png", "./Imagenes/Gran Dashi.png","Gran Dashi", "Langostinos y salmón rosado laqueados con maracuyá, palta, roll crocante y especias.", 6500, 0),
+            new Producto( "./Imagenes/Gran Steak.png", "./Imagenes/Gran Steak.png","Gran Steak", "Salmón glaseado en salsa teriyaki con salteado de vegetales y fideos de arroz.", 7000, 0),
+            new Producto( "./Imagenes/Yakimeshi.png", "./Imagenes/Yakimeshi.png","Yakimeshi", "Arroz salteado al wok con vegetales, huevo y pollo/lomo/salmón/langostinos.", 7500, 0),
+            new Producto( "./Imagenes/Tentacion Chocolate.png","./Imagenes/Tentacion Chocolate.png", "Tentacion Chocolate", "Mousse de chocolate amargo al caramelo con un toque de frutos del bosque.", 4500,  0),
+            new Producto( "./Imagenes/Apple Dingo.png","./Imagenes/Apple Dingo.png", "Apple Dingo", "Manzanas cocidas en almíbar de naranjas con crocante de caramelo.", 4500, 0),
+            new Producto( "./Imagenes/Cheese Cake.png","./Imagenes/Cheese Cake.png", "Cheese Cake", "Chesse cake vienés al limón y crocante de sésamo con frutos del bosque.", 4500, 0) );
 
 
 

@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morfemos.com</title>
+    <title>Sushi Jel</title>
     <link rel="stylesheet" href="./CSS/Style_Estandar.css">
     <link rel="stylesheet" href="./CSS/Style_Productos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda">
-    <link rel="icon" href="./Imagenes/Favicon.jpg" type="image/jpeg">          
+    <link rel="icon" href="./Imagenes/favicon.png" type="image/jpeg">          
 </head>
 <body>
     <!--Inicio Pantalla Principal---------------->
     <!--Encabesado con Nombre de Empresa y logo-->
     <header id="hdrHeader">
         <div id="divHeader">
-            <h1 id="h1Empresa">Morfemos.com</h1>
+            <h1 id="h1Empresa">Sushi Jel</h1>
             <br>
-            <h4 id="h4Descripcion">Alta cocina desde la comodidad de tu casa!!!</h4>
+            <h4 id="h4Descripcion">Reservations & Deliveries</h4>
         </div>
-        <img id="imgLogo" src="./Imagenes/Logo.jpg" alt="Logotipo de tu Empresa">
+        <img id="imgLogo" src="./Imagenes/Logo.png" alt="Logotipo de tu Empresa">
     </header>
     
     <!--Barra de Menú de opciones-->
@@ -34,7 +35,7 @@
     
     <!--Titulo de la pantalla de opciones y totalizador-->
     <div id="divTitulo">
-        <h2 id="h2Titulo">Platos del Día</h2>
+        <h2 id="h2Titulo">Nuestra Propuesta:</h2>
         <div id="divTotal">
             <p id="pMonto">Importe Total: $0</p>
             <input type="button" ID="btnFinalizar" value="Finalizar" onclick="btnOnClickFinalizar()">
@@ -57,8 +58,8 @@
     <!--Pie de Pagina con dirección y mensajes de error-->
     <footer id="ftrPagina">
         <div id="divDireccion">
-            <p>Comisión: 24173 - Grupo: A1</p>
-            <p>Integrantes:  Poratti Jorge - Carrasco Alejandro - Paglione Victoria</p>
+            <p>Comisión: Lunes 15hs</p>
+            <p>Integrantes:  Jorge Luis Poratti - Jerónimo Esteban Alfonso - María del Luján Olaza</p>
         </div>
         <div id="divMensaje">
             <p id="pAviso"></p> 
@@ -74,18 +75,18 @@
             <table>
                 <tr>
                     <td class="clsTblCol1">
-                        <label for="iptNombre">Nombre:</label>
-                    </td>
-                    <td class="clsTblCol1">
-                        <input type="text" id="iptNombre" name="iptNombre" class="clsInpDatos" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="clsTblCol1">
                         <label for="iptEmail">eMail:</label>
                     </td>
                     <td class="clsTblCol2">
                         <input type="text" id="iptEmail" name="iptEmail" class="clsInpDatos" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="clsTblCol1">
+                        <label for="iptNombre">Nombre:</label>
+                    </td>
+                    <td class="clsTblCol1">
+                        <input type="text" id="iptNombre" name="iptNombre" class="clsInpDatos" required>
                     </td>
                 </tr>
                 <tr>

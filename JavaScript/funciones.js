@@ -19,20 +19,30 @@ function valEMail(email, mostrar)
 // Muestra en pantalla una caja con el Titulo y Mensaje pasado por parametro y un boton Aceptar
 //  -titulo: Titulo del Mensaje
 //  -mensaje: Texto del Mensaje.
-function  fctMensaje(titulo = "", mensaje)
-{
+function  fctMensaje(titulo = "", mensaje){
+
     const divMensaje = document.createElement("div");
     divMensaje.id = "divVentanaMensaje";
-    divMensaje.innerHTML = `
-                        <div id="divFntMensaje">
-                            <p id="pFntMensajeTitulo">` + titulo + `</p>
-                            <div>
-                                <p id="pFntMensaje">` + mensaje + `</p>
-                                <br>
-                                <button id="btnFntMensaje" onclick="onClicAceptarFctMensaje()">Aceptar</button>
-                            </div>
-                        </div>
-                        `;
+    const divFntMensaje = document.createElement("div");
+    divFntMensaje.id = "divFntMensaje";
+    const pFntMensajeTitulo = document.createElement("p")
+    pFntMensajeTitulo.id = "pFntMensajeTitulo"
+    pFntMensajeTitulo.innerText = titulo;
+    const divContenedor = document.createElement("div");
+    const pFntMensaje = document.createElement("p");
+    pFntMensaje.id = "pFntMensaje";
+    pFntMensaje.innerText = mensaje;
+    const br = document.createElement("br");
+    const btnFntMensaje = document.createElement("button");
+    btnFntMensaje.id = "btnFntMensaje";
+    btnFntMensaje.addEventListener("click", onClicAceptarFctMensaje);
+    btnFntMensaje.innerText = "Aceptar";
+    divContenedor.appendChild(pFntMensaje);
+    divContenedor.appendChild(br);
+    divContenedor.appendChild(btnFntMensaje);
+    divFntMensaje.appendChild(pFntMensajeTitulo);
+    divFntMensaje.appendChild(divContenedor);
+    divMensaje.appendChild(divFntMensaje);
     document.body.appendChild(divMensaje);
 }
 

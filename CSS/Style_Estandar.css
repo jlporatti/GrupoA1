@@ -13,8 +13,8 @@
     /*Estilo del Nombre de la empresa*/ 
     color: #23dc8c;                       /*Color del Descripción*/
     font-size: 70px;                        /*Tamaño de la letra*/
-    font-family: 'Tangerine', serif;        /*Eleccion del Font*/
-    line-height: .7;                         /*Interlineado entre textos*/
+    font-family: "Jockey One", sans-serif;  /*Eleccion del Font*/
+    line-height: .7;                        /*Interlineado entre textos*/
     text-shadow: 4px 4px 4px #c14949;     /*Sombreado de la letra*/
     margin: 0;                              /*Define el Margen*/
 }
@@ -25,8 +25,8 @@
 
 #h4Descripcion{
     /*Estilo de la Descripción de la empresa*/ 
-    color: rgb(161, 210, 237);              /*Color del Titulo*/
-    font-family: 'Tangerine', serif;        /*Eleccion del Font*/
+    color: rgb(161, 210, 237);             /*Color del Titulo*/
+    font-family: "Jockey One", sans-serif;  /*Eleccion del Font*/
     font-size: 25px;                        /*Tamaño de la letra*/
     line-height: .7;                        /*Interlineado entre textos*/
     margin: 0;                              /*Define el Margen*/

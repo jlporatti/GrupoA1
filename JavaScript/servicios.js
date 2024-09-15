@@ -33,10 +33,10 @@ class foto {
 let fotos = [];
 
 fotos.push( 
-            new foto("Cenas", "./Imagenes/Cenas.jpg","Has que tu cena sea todo un show, nuestro Chef te presenta el plato"),
-            new foto("Envios a Domicilio", "./Imagenes/EnvioDomicilio.jpg", "Si te anotas en nuestra pagina, podemos arreglar comida diaria a la hora que lo deses"),
-            new foto("Reunones", "./Imagenes/Reuniones.jpg","Para esas ocaciones especiales, tenemos los mejores menús con excelentes presentacion"),
-            new foto("Servicio a empresas", "./Imagenes/ViandasEmpresas.jpg", "Comidas variadas por dia, al mejor precio, para toda la empresa o para eventos especiales"))
+            new foto("Cenas Privadas", "./Imagenes/Foto5.jpg","Has que tu cena sea todo un show, nuestro Chef te presenta el plato"),
+            new foto("Envios a Domicilio", "./Imagenes/Foto2.jpg", "Compra en nuestra pagina wwww.Sushi_Jel.com, desde la comodidad de tucasa"),
+            new foto("Reunones Ocacionales", "./Imagenes/Foto3.jpg","Para esas ocaciones especiales, tenemos los mejores menús con excelentes presentacion"),
+            new foto("Cenas Show", "./Imagenes/Foto4.jpg", "Nuestro Chef prepara los platos a la vista y nos cuenta sobre la procedencia e historia de las preparaciones"))
 
 
 
